@@ -6,7 +6,8 @@
   "scripts": {
     "start": "node server/server.js",
     "dev": "nodemon server/server.js",
-    "seed": "node server/seeders/seedData.js"
+    "seed": "node server/seeders/seedData.js",
+    "db:status": "node server/utils/dbStatus.js"
   },
   "keywords": [
     "ecommerce",
