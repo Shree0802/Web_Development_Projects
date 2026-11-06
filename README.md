@@ -59,7 +59,7 @@
 - [REST API Reference](#-rest-api-reference)
 - [Local Installation & Setup Guide](#-local-installation--setup-guide)
 - [Environment Configuration](#-environment-configuration)
-- [UI Preview & Screenshots](#-ui-preview--screenshots)
+- [Project Interface & Screenshots](#project-interface)
 - [Security Architecture](#-security-architecture)
 - [Production Deployment](#-production-deployment)
 - [Limitations & Future Roadmap](#-limitations--future-roadmap)
@@ -494,30 +494,74 @@ http://localhost:5000
 
 ---
 
-## 🖼️ UI Preview & Screenshots
+<a id="project-interface"></a>
+## 🖥️ Project Interface
 
-<div align="center">
+A visual walkthrough of the actual running **ShopSphere** web application, showcasing the responsive UI/UX, catalog discovery, interactive cart, and checkout workflows.
 
-### Modern Responsive Interface across Desktop & Mobile
+---
 
-| Desktop Experience | Mobile Experience |
+### 1. Homepage & Hero Discovery Banner
+> The landing page introduces the store's visual identity, presenting a hero promotional banner, category quick-navigation chips, and a dynamic featured product showcase powered by MongoDB Atlas.
+
+<p align="center">
+  <img src="screenshots/homepage.png" alt="ShopSphere Homepage" width="100%">
+</p>
+
+---
+
+### 2. Products Listing & Multi-Parametric Filter
+> Comprehensive catalog exploration view with live keyword search, category taxonomy sidebar, dynamic price range slider, and pagination controls.
+
+<p align="center">
+  <img src="screenshots/products_listing.png" alt="Products Listing Page" width="100%">
+</p>
+
+---
+
+### 3. Product Details Page
+> Deep-dive view of individual catalog products displaying high-resolution imagery, pricing in Indian Rupees (₹), discount badges, rating stars, live stock counters, and Add to Cart controls.
+
+<p align="center">
+  <img src="screenshots/product_details.png" alt="Product Details Page" width="100%">
+</p>
+
+---
+
+### 4. Interactive Shopping Cart
+> Real-time shopping cart management displaying line items, quantity adjustment controls, line totals, 18% GST tax calculation, and free delivery thresholds. Supports unauthenticated guest storage and cloud synchronization upon login.
+
+<p align="center">
+  <img src="screenshots/shopping_cart.png" alt="Shopping Cart Page" width="100%">
+</p>
+
+---
+
+### 5. Authentication & Registration Pages
+> Secure customer onboarding and sign-in interfaces utilizing JSON Web Tokens (JWT) and bcrypt password hashing with real-time field validation and toast notifications.
+
+| User Login Interface | Customer Registration Interface |
 | :---: | :---: |
-| Clean Grid Layout, Live Autocomplete Search, Instant Filters | Off-Canvas Drawer, Sticky Cart Badge, Compact Cards |
+| <img src="screenshots/login_page.png" alt="Login Interface" width="100%"> | <img src="screenshots/register_page.png" alt="Registration Interface" width="100%"> |
+| *Email & password authentication with JWT token issuance* | *Account creation form with input sanitization and password rules* |
 
-</div>
+---
 
-> 📸 **Screenshot Gallery Instructions:**
-> To add your own high-resolution screenshots to your GitHub repository:
-> 1. Capture screenshots of the key pages (Homepage, Product Catalog, Product Details, Cart, Checkout, Dark Mode).
-> 2. Create an `assets/` or `screenshots/` directory in the repository.
-> 3. Add markdown image links below using relative paths:
->
-> ```markdown
-> ![Homepage Preview](screenshots/homepage.png)
-> ![Product Catalog](screenshots/products.png)
-> ![Cart & Checkout](screenshots/checkout.png)
-> ![Dark Theme](screenshots/dark-mode.png)
-> ```
+### 6. Multi-Step Checkout Page
+> Streamlined checkout screen collecting structured delivery address details and offering multiple payment method selections (Credit/Debit Card, UPI / Net Banking, Cash on Delivery) with atomic inventory validation.
+
+<p align="center">
+  <img src="screenshots/checkout_page.png" alt="Checkout Page" width="100%">
+</p>
+
+---
+
+### 7. Customer Profile & Account Dashboard
+> Personal user dashboard displaying account credentials, contact phone numbers, default shipping address book, and direct access to order history.
+
+<p align="center">
+  <img src="screenshots/user_profile.png" alt="User Profile Page" width="100%">
+</p>
 
 ---
 
