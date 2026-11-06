@@ -39,6 +39,15 @@
 
 ---
 
+## Homepage & Hero Discovery Banner
+> The landing page introduces the store's visual identity, presenting a hero promotional banner, category quick-navigation chips, and a dynamic featured product showcase powered by MongoDB Atlas.
+
+<p align="center">
+  <img src="screenshots/homepage.png" alt="ShopSphere Homepage" width="100%">
+</p>
+
+---
+
 ## 📑 Table of Contents
 
 - [Overview](#-overview)
@@ -544,24 +553,6 @@ A visual walkthrough of the actual running **ShopSphere** web application, showc
 | :---: | :---: |
 | <img src="screenshots/login_page.png" alt="Login Interface" width="100%"> | <img src="screenshots/register_page.png" alt="Registration Interface" width="100%"> |
 | *Email & password authentication with JWT token issuance* | *Account creation form with input sanitization and password rules* |
-
----
-
-### 6. Multi-Step Checkout Page
-> Streamlined checkout screen collecting structured delivery address details and offering multiple payment method selections (Credit/Debit Card, UPI / Net Banking, Cash on Delivery) with atomic inventory validation.
-
-<p align="center">
-  <img src="screenshots/checkout_page.png" alt="Checkout Page" width="100%">
-</p>
-
----
-
-### 7. Customer Profile & Account Dashboard
-> Personal user dashboard displaying account credentials, contact phone numbers, default shipping address book, and direct access to order history.
-
-<p align="center">
-  <img src="screenshots/user_profile.png" alt="User Profile Page" width="100%">
-</p>
 
 ---
 
