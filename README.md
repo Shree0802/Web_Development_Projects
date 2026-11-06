@@ -1,216 +1,603 @@
-# 🛍️ ShopSphere – Modern Full Stack E-Commerce Store
-# Website Link: [https://modern-full-stack-e-commerce-store.onrender.com](https://modern-full-stack-e-commerce-store.onrender.com/)
+# 🛍️ ShopSphere — Full-Stack E-Commerce Platform
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
-[![Node.js Version](https://img.shields.io/badge/node-%3E%3D18.0.0-green.svg)](https://nodejs.org/)
-[![Express.js](https://img.shields.io/badge/express-v4.19-lightgrey.svg)](https://expressjs.com/)
-[![MongoDB](https://img.shields.io/badge/mongodb-v8.4-brightgreen.svg)](https://www.mongodb.com/)
+<div align="center">
 
-**ShopSphere** is a complete, production-ready, full-stack E-Commerce platform built for the **CodeAlpha Full Stack Development Internship**. It combines a clean Model-View-Controller (MVC) Node.js & Express API with a responsive, glassmorphic, micro-animated Vanilla HTML5/CSS3/JS ES6+ frontend.
+  <!-- Project Logo / Icon Banner -->
+  <p align="center">
+    <img src="https://img.shields.io/badge/ShopSphere-E--Commerce-2563eb?style=for-the-badge&logo=shopify&logoColor=white" alt="ShopSphere Banner" height="42">
+  </p>
+
+  <h3>Next-Generation, Scalable Full-Stack E-Commerce Architecture</h3>
+
+  <p align="center">
+    A robust, modern Model-View-Controller (MVC) e-commerce solution built with Node.js, Express, MongoDB Atlas, and vanilla modern JavaScript (ES6+), designed for performance, modularity, and seamless user experiences.
+  </p>
+
+  <!-- Live Links & Badges -->
+  <p align="center">
+    <a href="https://shopspheree-commercestore.vercel.app/" target="_blank">
+      <img src="https://img.shields.io/badge/Live_Demo-Visit_Website-success?style=for-the-badge&logo=vercel&logoColor=white" alt="Live Demo">
+    </a>
+    <a href="https://github.com/Shree0802/ShopSphere_E-Commerce_Store" target="_blank">
+      <img src="https://img.shields.io/badge/GitHub-Repository-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub Repo">
+    </a>
+  </p>
+
+  <!-- Technology Badges -->
+  <p align="center">
+    <img src="https://img.shields.io/badge/Node.js-v18+-339933?style=flat-square&logo=node.js&logoColor=white" alt="Node.js">
+    <img src="https://img.shields.io/badge/Express.js-v4.19-000000?style=flat-square&logo=express&logoColor=white" alt="Express.js">
+    <img src="https://img.shields.io/badge/MongoDB-Atlas_Cloud-47A248?style=flat-square&logo=mongodb&logoColor=white" alt="MongoDB Atlas">
+    <img src="https://img.shields.io/badge/Mongoose-v8.4-880000?style=flat-square&logo=mongoose&logoColor=white" alt="Mongoose ODM">
+    <img src="https://img.shields.io/badge/JWT-Secure_Auth-000000?style=flat-square&logo=jsonwebtokens&logoColor=white" alt="JWT">
+    <img src="https://img.shields.io/badge/JavaScript-ES6+-F7DF1E?style=flat-square&logo=javascript&logoColor=black" alt="JavaScript">
+    <img src="https://img.shields.io/badge/Vercel-Production_Deploy-000000?style=flat-square&logo=vercel&logoColor=white" alt="Vercel">
+    <img src="https://img.shields.io/badge/License-ISC-blue?style=flat-square" alt="License: ISC">
+  </p>
+
+</div>
 
 ---
 
-## 🌟 Key Features
+## 📑 Table of Contents
+
+- [Overview](#-overview)
+- [Problem Statement & Objectives](#-problem-statement--objectives)
+- [Key Features](#-key-features)
+  - [🔐 Authentication & Authorization](#-authentication--authorization)
+  - [📦 Product Catalog, Search & Filtering](#-product-catalog-search--filtering)
+  - [🛒 Shopping Cart & Guest Cart Synchronization](#-shopping-cart--guest-cart-synchronization)
+  - [❤️ Wishlist Management](#️-wishlist-management)
+  - [💳 Multi-Step Checkout & Stock Decrementing](#-multi-step-checkout--stock-decrementing)
+  - [📦 Order Tracking & User Dashboard](#-order-tracking--user-dashboard)
+  - [🎨 Design System & Theme Engine](#-design-system--theme-engine)
+  - [🍃 Database Health & Diagnostics](#-database-health--diagnostics)
+- [Technology Stack](#-technology-stack)
+- [System Architecture](#-system-architecture)
+- [Project Directory Structure](#-project-directory-structure)
+- [Database Models & Schemas](#-database-models--schemas)
+- [REST API Reference](#-rest-api-reference)
+- [Local Installation & Setup Guide](#-local-installation--setup-guide)
+- [Environment Configuration](#-environment-configuration)
+- [UI Preview & Screenshots](#-ui-preview--screenshots)
+- [Security Architecture](#-security-architecture)
+- [Production Deployment](#-production-deployment)
+- [Limitations & Future Roadmap](#-limitations--future-roadmap)
+- [Author & Acknowledgments](#-author--acknowledgments)
+- [License](#-license)
+
+---
+
+## 🌟 Overview
+
+**ShopSphere** is a production-ready, full-stack e-commerce web application engineered to deliver a seamless shopping experience. Built for the **CodeAlpha Full-Stack Development Internship**, the platform combines a robust Model-View-Controller (MVC) Node.js/Express backend with an interactive vanilla HTML5, CSS3, and JavaScript ES6+ frontend.
+
+The project connects to a **MongoDB Atlas Cloud Database**, features JSON Web Token (JWT) role-based session authentication with HTTP-only cookie support, and includes a full suite of commercial shopping capabilities — from live product search and dynamic category filtering to multi-step checkout, guest cart persistence, and order lifecycle management.
+
+- **Production URL:** [https://shopspheree-commercestore.vercel.app/](https://shopspheree-commercestore.vercel.app/)
+- **Repository:** [https://github.com/Shree0802/ShopSphere_E-Commerce_Store](https://github.com/Shree0802/ShopSphere_E-Commerce_Store)
+
+---
+
+## 🎯 Problem Statement & Objectives
+
+### Problem Statement
+Modern digital shoppers face disjointed navigation, clunky cart handoffs, unoptimized search experiences, and slow page loads on monolithic frameworks. Developers learning full-stack engineering often rely on heavy opinionated frontends (e.g., React/Angular) without understanding the core principles of DOM manipulation, HTTP request-response cycles, session security, and state synchronization.
+
+### Objectives
+1. **Lightweight, High-Performance Frontend:** Build a lightning-fast, dependency-free UI using native Web APIs, modular vanilla JavaScript, CSS custom properties, and responsive CSS grid/flexbox layouts.
+2. **Production-Grade RESTful API:** Structure an idiomatic Express.js server adhering to MVC principles, standard HTTP status codes, structured error handling, and declarative input validation.
+3. **Cloud Database Architecture:** Integrate MongoDB Atlas with Mongoose schemas, handling automated seeding, index validation, inventory decrementing, and database health inspection.
+4. **Resilient Session & State Flow:** Support guest shopper browsing with `localStorage` fallback while guaranteeing seamless guest-to-authenticated cart synchronization upon login.
+
+---
+
+## 🚀 Key Features
 
 ### 🔐 Authentication & Authorization
-- **JWT Authentication**: Encrypted JSON Web Tokens stored in HttpOnly cookies and Bearer headers.
-- **Bcrypt Hashing**: Passwords salt-hashed with `bcryptjs`.
-- **Protected Routes**: Middleware enforcement for protected user endpoints and admin privileges.
-- **User Profiles**: View and update contact info, shipping address, and password.
+- **Dual-Token Delivery:** Issues secure JWTs accessible both via `Bearer` Authorization headers and secure `HttpOnly` cookies.
+- **Salt-Hashed Passwords:** Implements `bcryptjs` with auto-salted hashing (`pre('save')` Mongoose hook).
+- **Role-Based Access Control (RBAC):** Middleware checks enforce permissions (`user` vs. `admin`) across protected catalog management and checkout routes.
+- **Persistent User Sessions:** Synchronizes login state across all HTML pages via `localStorage` and centralized authentication listeners.
 
-### 📦 Product Catalog & Search
-- **25+ Realistic Products**: Pre-seeded database across 7 categories (*Electronics, Fashion, Shoes, Books, Accessories, Home Appliances, Sports*).
-- **Advanced Filtering**: Filter by category, price range, and rating.
-- **Live Search & Autocomplete**: Real-time header search with instant product suggestions.
-- **Sorting**: Sort by price (Low to High / High to Low), newest arrivals, or highest rated.
-- **Pagination**: Server-side and client-side pagination.
+### 📦 Product Catalog, Search & Filtering
+- **25 Pre-Seeded Products:** Realistic catalog across 7 diverse categories (*Electronics, Fashion, Shoes, Books, Accessories, Home Appliances, Sports*).
+- **Full-Text Keyword Search:** Case-insensitive search across product titles, descriptions, and categories (`$regex` MongoDB queries).
+- **Multi-Parametric Filtering:** Filter simultaneously by category, rating threshold, and numeric price range (`$gte`, `$lte`).
+- **Dynamic Sorting & Pagination:** Sort by price (low-to-high, high-to-low), newest arrivals, or customer ratings with configurable per-page limits.
 
-### 🛒 Shopping Cart & Orders
-- **Cart Management**: Add items, update quantities, delete items, and calculate subtotal/tax/shipping dynamically.
-- **Guest & Auth Cart Sync**: Guest carts stored in local storage seamlessly sync upon sign-in.
-- **Checkout Flow**: Complete multi-step address collection, payment method selection (*Credit Card, PayPal, COD*), and order placement.
-- **Order Tracking & History**: User dashboard tracking order status (*Processing, Shipped, Delivered*).
+### 🛒 Shopping Cart & Guest Cart Synchronization
+- **Guest-First Shopping:** Unauthenticated users can freely add, modify, and delete items; cart state is maintained locally in browser storage.
+- **Automated Cloud Sync:** When a guest logs in or registers, their local cart items seamlessly merge with their cloud MongoDB cart session.
+- **Live Pricing Engine:** Dynamically calculates subtotal, 18% GST/tax, flat shipping fees (free shipping above ₹1,000 threshold), and final order totals.
 
-### 🎨 Design & UI/UX Excellence
-- **Theme Support**: Seamless Light & Dark mode toggle with local storage persistence.
-- **Modern Styling**: CSS custom properties, glassmorphism, responsive grid layouts, and micro-animations.
-- **Notification System**: Built-in non-intrusive Toast notifications for immediate feedback.
-- **Responsive Layout**: Designed for mobile, tablet, and widescreen desktop displays.
+### ❤️ Wishlist Management
+- **Personalized Wishlist:** Toggle any product to/from the user's private wishlist with real-time UI indicator feedback.
+- **Mongoose Reference Arrays:** Wishlist item IDs are stored as relational ObjectIds linking to the `Product` collection.
+
+### 💳 Multi-Step Checkout & Stock Decrementing
+- **Structured Address Collection:** Validates street, city, state, postal code, and country fields.
+- **Multiple Payment Method Selection:** Supports Credit/Debit Card, UPI / Net Banking, and Cash on Delivery (COD).
+- **Atomic Stock Decrementing:** During order creation, the server validates stock availability and decrements product inventory atomically before finalizing the transaction.
+
+### 📦 Order Tracking & User Dashboard
+- **Order Lifecycle History:** Logged-in customers can track order statuses (*Pending, Processing, Shipped, Delivered, Cancelled*).
+- **Order Details Breakdown:** Complete view of ordered items, item quantities, pricing breakdown, shipping addresses, and transaction timestamps.
+- **User Profile Management:** Update personal contact details, phone numbers, and saved shipping addresses.
+
+### 🎨 Design System & Theme Engine
+- **Dark & Light Mode:** Toggleable color themes with instantaneous CSS variable switching and `localStorage` persistence.
+- **Custom Toast Notifications:** Non-intrusive floating toasts (`Toast.success`, `Toast.error`, `Toast.info`) provide real-time operational feedback.
+- **Fully Responsive:** Optimized layouts for mobile viewports (<480px), tablets (768px), and high-resolution desktop displays.
+
+### 🍃 Database Health & Diagnostics
+- **Live Status CLI Tool:** Built-in `npm run db:status` script displays real-time connection status, collection document counts, customer accounts, and recent orders.
+- **Automated Seeding:** Fallback mechanism that detects an empty catalog and populates all 25 products with INR (₹) pricing automatically.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Technology Stack
 
-- **Frontend**: HTML5, CSS3 (Vanilla CSS variables), JavaScript ES6+ Modules
-- **Backend**: Node.js, Express.js (MVC Pattern)
-- **Database**: MongoDB, Mongoose ODM (with automatic fallback to `mongodb-memory-server` for out-of-the-box demo execution)
-- **Security & Utilities**: `jsonwebtoken`, `bcryptjs`, `express-validator`, `multer`, `cors`, `cookie-parser`, `dotenv`
+| Layer | Technology | Purpose |
+| :--- | :--- | :--- |
+| **Frontend** | **HTML5** | Semantic markup across 13 dedicated application pages |
+| | **CSS3** | Custom design system, CSS custom properties, grid/flexbox, animations |
+| | **JavaScript (ES6+)** | Modular client-side business logic, DOM management, Fetch API wrapper |
+| **Backend** | **Node.js** | Server-side JavaScript runtime environment |
+| | **Express.js (v4.19)** | RESTful API routing, MVC architecture, middleware pipeline |
+| **Database** | **MongoDB Atlas** | Cloud-hosted NoSQL document database cluster |
+| | **Mongoose ODM (v8.4)** | Schema modeling, validation, pre-save hooks, and population queries |
+| **Security & Auth**| **JSON Web Tokens (JWT)** | Stateless cryptographically signed session tokens |
+| | **bcryptjs** | One-way salt hashing for user password protection |
+| | **Express Validator** | Declarative request payload sanitation and schema validation |
+| | **Cookie Parser** | HTTP cookie serialization and extraction for JWT storage |
+| | **CORS** | Configured cross-origin resource sharing with credentials enabled |
+| **Deployment** | **Vercel** | Serverless production hosting with `vercel.json` rewrite routing |
 
 ---
 
-## 📁 Project Folder Structure
+## 🏗️ System Architecture
 
+```mermaid
+flowchart TD
+    subgraph Client ["Client Layer (Browser)"]
+        UI["HTML5 / CSS3 / Vanilla JS ES6+"]
+        LocalStorage["localStorage (Guest Cart, Theme, JWT)"]
+        APIClient["APIClient (Fetch Interceptor)"]
+        UI <--> LocalStorage
+        UI --> APIClient
+    end
+
+    subgraph Gateway ["Routing & Serverless Gateway"]
+        VercelRewrite["Vercel Serverless / Express Router"]
+        APIClient -->|HTTPS Request + Bearer / Cookie| VercelRewrite
+    end
+
+    subgraph Middleware ["Middleware Pipeline"]
+        Cors["CORS Handler"]
+        CookieParser["Cookie Parser"]
+        Validator["Express Validator"]
+        AuthMiddleware["Auth & RBAC Middleware"]
+        VercelRewrite --> Cors --> CookieParser --> Validator --> AuthMiddleware
+    end
+
+    subgraph Controllers ["Controllers & Business Logic"]
+        AuthController["authController.js"]
+        ProductController["productController.js"]
+        CartController["cartController.js"]
+        OrderController["orderController.js"]
+        APIFeatures["APIFeatures (Search / Filter / Paginate)"]
+        AuthMiddleware --> AuthController
+        AuthMiddleware --> ProductController
+        AuthMiddleware --> CartController
+        AuthMiddleware --> OrderController
+        ProductController --> APIFeatures
+    end
+
+    subgraph Database ["Persistence Layer (MongoDB Atlas Cloud)"]
+        Mongoose["Mongoose ODM Models"]
+        AtlasCluster[("MongoDB Atlas Cloud Cluster")]
+        UserCol[("users collection")]
+        ProductCol[("products collection")]
+        CartCol[("carts collection")]
+        OrderCol[("orders collection")]
+        
+        AuthController & ProductController & CartController & OrderController --> Mongoose
+        Mongoose --> AtlasCluster
+        AtlasCluster --> UserCol
+        AtlasCluster --> ProductCol
+        AtlasCluster --> CartCol
+        AtlasCluster --> OrderCol
+    end
 ```
-shopsphere/
-├── client/
+
+---
+
+## 📁 Project Directory Structure
+
+```text
+ShopSphere_E-Commerce_Store/
+│
+├── .env.example               # Template for required environment variables
+├── .gitignore                  # Git ignore rules (node_modules, .env, logs)
+├── package.json                # Project manifest, dependencies, and npm scripts
+├── package-lock.json           # Deterministic dependency tree lockfile
+├── vercel.json                 # Vercel serverless functions and URL rewrite rules
+├── README.md                   # Comprehensive project documentation
+│
+├── api/
+│   └── index.js                # Vercel Serverless Function entry point & HTTP router
+│
+├── client/                     # Frontend Application Assets
+│   ├── index.html              # Landing page (Hero banner, featured products, categories)
 │   ├── css/
-│   │   ├── main.css           # Global design system & tokens
-│   │   ├── components.css     # Navbar, product cards, toast, modals
-│   │   ├── dark-mode.css      # Dark theme overrides
-│   │   └── responsive.css     # Mobile & tablet breakpoints
+│   │   ├── main.css            # Base styles, CSS custom properties, typography
+│   │   ├── components.css      # Header, navbar, cards, badges, buttons, modals
+│   │   ├── dark-mode.css       # Dark theme color tokens & overrides
+│   │   └── responsive.css      # Breakpoints for mobile, tablet, and widescreen
 │   ├── js/
-│   │   ├── api.js             # Centralized fetch wrapper with JWT interceptor
-│   │   ├── auth.js            # User session & registration manager
-│   │   ├── cart.js            # Shopping cart state manager
-│   │   ├── wishlist.js        # User wishlist manager
-│   │   ├── products.js        # Product card renderer & catalog filters
-│   │   ├── product-details.js # Single product details manager
-│   │   ├── checkout.js        # Checkout & order submission handler
-│   │   ├── profile.js         # Dashboard & order history viewer
-│   │   ├── toast.js           # Toast notification system
-│   │   └── main.js            # Theme toggle, search autocomplete, mobile menu
-│   ├── pages/
-│   │   ├── products.html
-│   │   ├── product-details.html
-│   │   ├── cart.html
-│   │   ├── checkout.html
-│   │   ├── login.html
-│   │   ├── register.html
-│   │   ├── profile.html
-│   │   ├── order-success.html
-│   │   ├── order-history.html
-│   │   ├── about.html
-│   │   ├── contact.html
-│   │   └── 404.html
-│   └── index.html             # Landing page
-├── server/
-│   ├── config/
-│   │   └── db.js              # MongoDB connection & memory-server fallback
-│   ├── controllers/
-│   │   ├── authController.js
-│   │   ├── productController.js
-│   │   ├── cartController.js
-│   │   └── orderController.js
-│   ├── middleware/
-│   │   ├── authMiddleware.js
-│   │   ├── errorMiddleware.js
-│   │   ├── uploadMiddleware.js
-│   │   └── validateMiddleware.js
-│   ├── models/
-│   │   ├── User.js
-│   │   ├── Product.js
-│   │   ├── Cart.js
-│   │   └── Order.js
-│   ├── routes/
-│   │   ├── authRoutes.js
-│   │   ├── productRoutes.js
-│   │   ├── cartRoutes.js
-│   │   └── orderRoutes.js
-│   ├── seeders/
-│   │   └── seedData.js        # 25+ realistic products across 7 categories
-│   ├── utils/
-│   │   ├── apiFeatures.js
-│   │   └── generateToken.js
-│   ├── .env.example
-│   └── server.js              # Server entry point
-├── package.json
-└── README.md
+│   │   ├── api.js              # Centralized Fetch wrapper with JWT interceptor
+│   │   ├── auth.js             # User session, registration, login, and logout
+│   │   ├── cart.js             # Shopping cart state manager & guest synchronization
+│   │   ├── checkout.js         # Multi-step checkout, address validator & order submission
+│   │   ├── main.js             # Global event listeners, mobile drawer, search suggestion
+│   │   ├── product-details.js  # Single product view, image gallery, quantity selector
+│   │   ├── products.js         # Catalog renderer, filter listeners, sorting, pagination
+│   │   ├── profile.js          # User dashboard, profile update, order history display
+│   │   ├── toast.js            # Non-blocking floating notification engine
+│   │   └── wishlist.js         # Wishlist management and toggle handler
+│   └── pages/
+│       ├── 404.html            # Custom Page Not Found screen
+│       ├── about.html          # Brand story, mission statement, customer guarantees
+│       ├── cart.html           # Full shopping cart interface with line-item totals
+│       ├── checkout.html       # Shipping address collection & payment selection
+│       ├── contact.html        # Customer support inquiry form
+│       ├── login.html          # Customer and administrator sign-in page
+│       ├── order-history.html  # Comprehensive order history timeline
+│       ├── order-success.html  # Post-purchase order confirmation & invoice overview
+│       ├── product-details.html# Single product deep-dive & specification sheet
+│       ├── products.html       # Full catalog exploration with sidebar filters
+│       ├── profile.html        # Customer account settings & address book
+│       └── register.html       # Customer registration page with input validation
+│
+└── server/                     # Backend Application
+    ├── server.js               # Local development Express server bootstrap
+    ├── config/
+    │   └── db.js               # Mongoose connection with DNS fallback & auto-seeder
+    ├── controllers/
+    │   ├── authController.js   # User registration, login, profile, and wishlist handlers
+    │   ├── cartController.js   # Cart retrieval, addition, update, and clear handlers
+    │   ├── orderController.js  # Order creation, inventory decrement, order lookup
+    │   └── productController.js# Product CRUD, category aggregation, featured products
+    ├── middleware/
+    │   ├── authMiddleware.js   # JWT verification (`protect`) & role verification (`admin`)
+    │   ├── errorMiddleware.js  # 404 Not Found & centralized JSON error handler
+    │   ├── uploadMiddleware.js # Multer file upload configuration
+    │   └── validateMiddleware.js# Express-validator validation suites
+    ├── models/
+    │   ├── Cart.js             # Shopping cart schema with sub-document item array
+    │   ├── Order.js            # Order schema with shipping address, totals, and statuses
+    │   ├── Product.js          # Product schema with category enum, pricing, and stock
+    │   └── User.js             # User schema with bcrypt hook, role, and wishlist refs
+    ├── seeders/
+    │   └── seedData.js         # 25 products & default admin/user account seeder
+    └── utils/
+        ├── apiFeatures.js      # Search, filter, sort, and pagination builder
+        ├── dbStatus.js         # Command-line database inspector utility
+        ├── generateToken.js    # JWT token generator with signed expiration
+        └── migrateToAtlas.js   # Local-to-Atlas cloud database migration utility
 ```
 
 ---
 
-## ⚡ Quick Start & Installation
+## 🗄️ Database Models & Schemas
+
+The database schema is designed around 4 primary Mongoose models with relational references:
+
+```
+┌──────────────────┐             ┌──────────────────┐
+│       User       │             │     Product      │
+├──────────────────┤             ├──────────────────┤
+│ _id              │             │ _id              │
+│ name             │             │ name             │
+│ email (unique)   │             │ description      │
+│ password (hash)  │             │ category (enum)  │
+│ phone            │             │ price (INR)      │
+│ address (nested) │             │ discount (%)     │
+│ role (user/admin)│             │ stock            │
+│ wishlist [ref]───┼────────────>│ rating           │
+└────────┬─────────┘             │ image (URL)      │
+         │ 1:1                   │ isFeatured       │
+         v                       └────────┬─────────┘
+┌──────────────────┐                      │
+│       Cart       │                      │
+├──────────────────┤                      │
+│ _id              │                      │
+│ user [ref]       │                      │
+│ items [          │                      │
+│   product [ref]──┼──────────────────────┤
+│   quantity       │                      │
+│   price          │                      │
+│ ]                │                      │
+│ totalPrice       │                      │
+└──────────────────┘                      │
+         │ 1:N                            │
+         v                                v
+┌──────────────────────────────────────────────┐
+│                    Order                     │
+├──────────────────────────────────────────────┤
+│ _id                                          │
+│ user [ref]                                   │
+│ orderItems [ product [ref], name, qty, price]│
+│ shippingAddress { street, city, state, zip } │
+│ paymentMethod (Credit Card / UPI / COD)      │
+│ itemsPrice, taxPrice, shippingPrice, total   │
+│ status (Pending / Processing / Shipped / ..) │
+│ isPaid, paidAt                               │
+└──────────────────────────────────────────────┘
+```
+
+---
+
+## 📡 REST API Reference
+
+All API routes are served under the `/api` prefix and return standard JSON payloads.
+
+### 1. Authentication & User Profile (`/api/auth`)
+
+| Method | Endpoint | Description | Access | Auth Required |
+| :--- | :--- | :--- | :--- | :--- |
+| `POST` | `/api/auth/register` | Register new user account | Public | No |
+| `POST` | `/api/auth/login` | Authenticate user, return token & cookie | Public | No |
+| `POST` | `/api/auth/logout` | Clear authentication session & cookie | Public | No |
+| `GET` | `/api/auth/profile` | Retrieve profile of authenticated user | Private | `Bearer <token>` / Cookie |
+| `PUT` | `/api/auth/profile` | Update profile info, contact & addresses | Private | `Bearer <token>` / Cookie |
+| `POST` | `/api/auth/wishlist/:productId` | Toggle product ID in/out of wishlist | Private | `Bearer <token>` / Cookie |
+
+### 2. Product Catalog (`/api/products`)
+
+| Method | Endpoint | Description | Access | Auth Required |
+| :--- | :--- | :--- | :--- | :--- |
+| `GET` | `/api/products` | Query products (`?search=`, `?category=`, `?sort=`, `?page=`, `?limit=`) | Public | No |
+| `GET` | `/api/products/featured` | Fetch top featured products for carousel | Public | No |
+| `GET` | `/api/products/categories` | Retrieve list of categories with product counts | Public | No |
+| `GET` | `/api/products/:id` | Fetch detailed product information by ID | Public | No |
+| `POST` | `/api/products` | Create new catalog product | Admin | `Bearer <token>` (Admin Role) |
+| `PUT` | `/api/products/:id` | Update product details, stock, or price | Admin | `Bearer <token>` (Admin Role) |
+| `DELETE` | `/api/products/:id` | Permanently remove product from catalog | Admin | `Bearer <token>` (Admin Role) |
+
+### 3. Shopping Cart (`/api/cart`)
+
+| Method | Endpoint | Description | Access | Auth Required |
+| :--- | :--- | :--- | :--- | :--- |
+| `GET` | `/api/cart` | Retrieve user's current shopping cart | Private | `Bearer <token>` / Cookie |
+| `POST` | `/api/cart` | Add product to cart or increment quantity | Private | `Bearer <token>` / Cookie |
+| `PUT` | `/api/cart/item` | Update exact quantity of a cart line item | Private | `Bearer <token>` / Cookie |
+| `DELETE` | `/api/cart/item/:productId` | Remove a specific product from cart | Private | `Bearer <token>` / Cookie |
+| `DELETE` | `/api/cart` | Empty all items from user's cart | Private | `Bearer <token>` / Cookie |
+
+### 4. Orders & Checkout (`/api/orders`)
+
+| Method | Endpoint | Description | Access | Auth Required |
+| :--- | :--- | :--- | :--- | :--- |
+| `POST` | `/api/orders` | Place new order, decrement inventory, clear cart | Private | `Bearer <token>` / Cookie |
+| `GET` | `/api/orders` | Retrieve authenticated user's order history | Private | `Bearer <token>` / Cookie |
+| `GET` | `/api/orders/:id` | Retrieve specific order details by ID | Private | `Bearer <token>` / Cookie |
+| `PUT` | `/api/orders/:id/pay` | Mark order status as paid with timestamp | Private | `Bearer <token>` / Cookie |
+
+### 5. System Health (`/api/health`)
+
+| Method | Endpoint | Description | Access | Auth Required |
+| :--- | :--- | :--- | :--- | :--- |
+| `GET` | `/api/health` | Returns server operational status & timestamp | Public | No |
+
+---
+
+## 💻 Local Installation & Setup Guide
+
+Follow these steps to run the complete ShopSphere application locally on your computer.
 
 ### Prerequisites
-- [Node.js](https://nodejs.org/) (v18.0.0 or higher)
-- [npm](https://www.npmjs.com/) (v9.0.0 or higher)
-- Optional: Local [MongoDB](https://www.mongodb.com/try/download/community) or [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) account (if omitted, the server will automatically launch an in-memory database for testing).
+- **Node.js**: v18.0.0 or higher ([Download Node.js](https://nodejs.org/))
+- **npm**: v9.0.0 or higher (packaged with Node.js)
+- **MongoDB**: A free [MongoDB Atlas](https://www.mongodb.com/cloud/atlas) cluster URI **OR** a local [MongoDB Community Server](https://www.mongodb.com/try/download/community) instance running on port 27017.
 
-### Step 1: Install Dependencies
+---
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/Shree0802/ShopSphere_E-Commerce_Store.git
+cd ShopSphere_E-Commerce_Store
+```
+
+### Step 2: Install Dependencies
+
 ```bash
 npm install
 ```
 
-### Step 2: Configure Environment Variables
-Create a `.env` file in the root directory (or copy from `.env.example`):
+### Step 3: Configure Environment Variables
+
+Create a `.env` file in the root directory by copying the provided example:
+
+```bash
+# On Windows PowerShell
+Copy-Item .env.example .env
+
+# On macOS / Linux
+cp .env.example .env
+```
+
+Open `.env` and configure your settings:
+
 ```env
 PORT=5000
 NODE_ENV=development
-MONGODB_URI=mongodb://localhost:27017/shopsphere
-JWT_SECRET=shopsphere_super_secret_jwt_key_2026_codealpha
+MONGODB_URI=mongodb+srv://<username>:<password>@your-cluster.mongodb.net/shopsphere?retryWrites=true&w=majority
+JWT_SECRET=your_super_secret_jwt_random_key_here
 JWT_EXPIRE=30d
 COOKIE_EXPIRE=30
 ```
 
-### Step 3: Seed Database (25+ Products & Admin/User Accounts)
+> **Note:** If using local MongoDB, set `MONGODB_URI=mongodb://localhost:27017/shopsphere`.
+
+### Step 4: Seed the Database
+
+Populate your database with 25 realistic products across all 7 categories, plus test accounts:
+
 ```bash
 npm run seed
 ```
-*Seeded Credentials:*
-- **Admin**: `admin@shopsphere.com` / `adminpassword123`
-- **User**: `user@shopsphere.com` / `userpassword123`
 
-### Step 4: Run Development Server
+**Seeded Credentials for Local Testing:**
+- **Administrator:** `admin@shopsphere.com` / `adminpassword123`
+- **Standard Customer:** `user@shopsphere.com` / `userpassword123`
+
+### Step 5: Verify Database Connection & Records
+
+Run the built-in diagnostic tool to inspect your active database:
+
 ```bash
-npm run dev
+npm run db:status
 ```
-Open your browser and navigate to `http://localhost:5000`.
+
+### Step 6: Start the Server
+
+```bash
+# For development with nodemon hot-reload
+npm run dev
+
+# For standard production mode
+npm start
+```
+
+Open your browser and navigate to:
+```text
+http://localhost:5000
+```
 
 ---
 
-## 📡 API Endpoints Reference
+## ⚙️ Environment Configuration
 
-### Authentication (`/api/auth`)
-| Method | Endpoint | Description | Access |
-|---|---|---|---|
-| `POST` | `/api/auth/register` | Register new user account | Public |
-| `POST` | `/api/auth/login` | Authenticate user & issue JWT | Public |
-| `POST` | `/api/auth/logout` | Clear auth cookie | Public |
-| `GET` | `/api/auth/profile` | Get current user profile | Private |
-| `PUT` | `/api/auth/profile` | Update profile & address | Private |
-| `POST` | `/api/auth/wishlist/:productId` | Toggle product in wishlist | Private |
+| Variable Name | Required | Default Value | Description |
+| :--- | :---: | :--- | :--- |
+| `PORT` | No | `5000` | Port on which the local Express server listens |
+| `NODE_ENV` | Yes | `development` | Environment mode (`development` or `production`) |
+| `MONGODB_URI` | Yes | *None (Required)* | MongoDB connection string (Local or MongoDB Atlas) |
+| `JWT_SECRET` | Yes | *None (Required)* | High-entropy secret key for signing JSON Web Tokens |
+| `JWT_EXPIRE` | No | `30d` | Token validity lifespan (e.g., `7d`, `30d`) |
+| `COOKIE_EXPIRE` | No | `30` | Browser cookie expiration in days |
 
-### Products (`/api/products`)
-| Method | Endpoint | Description | Access |
-|---|---|---|---|
-| `GET` | `/api/products` | Get products (search, filter, sort, paginate) | Public |
-| `GET` | `/api/products/featured` | Get top featured products | Public |
-| `GET` | `/api/products/categories` | Get category breakdown | Public |
-| `GET` | `/api/products/:id` | Get single product details | Public |
-| `POST` | `/api/products` | Create product | Admin |
-| `PUT` | `/api/products/:id` | Update product | Admin |
-| `DELETE` | `/api/products/:id` | Delete product | Admin |
+> 🔒 **Security Notice:** Never commit your actual `.env` file or cloud database credentials to version control. The repository `.gitignore` automatically excludes `.env`.
 
-### Cart (`/api/cart`)
-| Method | Endpoint | Description | Access |
-|---|---|---|---|
-| `GET` | `/api/cart` | Get user shopping cart | Private |
-| `POST` | `/api/cart` | Add item / update quantity | Private |
-| `PUT` | `/api/cart/item` | Change quantity of item | Private |
-| `DELETE` | `/api/cart/item/:productId` | Remove item from cart | Private |
-| `DELETE` | `/api/cart` | Empty entire cart | Private |
+---
 
-### Orders (`/api/orders`)
-| Method | Endpoint | Description | Access |
-|---|---|---|---|
-| `POST` | `/api/orders` | Place new order | Private |
-| `GET` | `/api/orders` | Get logged-in user orders | Private |
-| `GET` | `/api/orders/:id` | Get specific order by ID | Private |
+## 🖼️ UI Preview & Screenshots
 
+<div align="center">
 
-## 📋 Evaluation & Testing Checklist
+### Modern Responsive Interface across Desktop & Mobile
 
-- [x] All 25+ items seeded across 7 distinct categories.
-- [x] JWT Registration, Login, Logout, and Protected Route Enforcement.
-- [x] Live search suggestions and category/price filtering.
-- [x] Add to Cart, Update Quantity, Remove Item, and Subtotal calculations.
-- [x] Multi-step Checkout flow, Order placement, and Stock decrementing.
-- [x] User Profile dashboard and Order History tracking.
-- [x] Dark/Light Theme toggle with persistence.
-- [x] Toast notification feedback for all actions.
-- [x] Fully responsive layout on mobile, tablet, and desktop views.
+| Desktop Experience | Mobile Experience |
+| :---: | :---: |
+| Clean Grid Layout, Live Autocomplete Search, Instant Filters | Off-Canvas Drawer, Sticky Cart Badge, Compact Cards |
+
+</div>
+
+> 📸 **Screenshot Gallery Instructions:**
+> To add your own high-resolution screenshots to your GitHub repository:
+> 1. Capture screenshots of the key pages (Homepage, Product Catalog, Product Details, Cart, Checkout, Dark Mode).
+> 2. Create an `assets/` or `screenshots/` directory in the repository.
+> 3. Add markdown image links below using relative paths:
+>
+> ```markdown
+> ![Homepage Preview](screenshots/homepage.png)
+> ![Product Catalog](screenshots/products.png)
+> ![Cart & Checkout](screenshots/checkout.png)
+> ![Dark Theme](screenshots/dark-mode.png)
+> ```
+
+---
+
+## 🛡️ Security Architecture
+
+ShopSphere implements practical defense-in-depth security patterns:
+
+- **Salted Password Hashing:** Passwords are never saved in plaintext. Using `bcryptjs`, passwords are automatically hashed with 10 salt rounds before persistence.
+- **Stateless Cryptographic Sessions:** Authentication relies on signed JSON Web Tokens (JWT) using HMAC-SHA256, verified on every protected request.
+- **Dual-Token Interception:** The client API interceptor automatically reads tokens from both `Authorization: Bearer <token>` and `HttpOnly` cookie stores.
+- **Role-Based Gateways:** Sensitive operations (such as product creation or administrative management) are guarded by sequential middleware checks (`protect` then `admin`).
+- **Declarative Request Validation:** Express-validator checks all incoming registration, login, product, and order payloads before touching controllers, rejecting malformed inputs.
+- **Inventory Concurrency Guard:** The order processor checks available stock before committing an order, rejecting transactions if requested quantities exceed inventory.
+
+---
+
+## 🚀 Production Deployment
+
+ShopSphere is pre-configured for zero-friction serverless deployment on **Vercel** with a **MongoDB Atlas Cloud Database**.
+
+### Deploying on Vercel:
+
+1. **Push your repository** to your GitHub account:
+   ```bash
+   git push -u origin main
+   ```
+2. Log in to [Vercel](https://vercel.com/) and click **"Add New..."** → **"Project"**.
+3. Import your **`ShopSphere_E-Commerce_Store`** repository.
+4. Keep the default settings:
+   - **Framework Preset:** `Other`
+   - **Root Directory:** `./`
+5. Expand the **Environment Variables** panel and add:
+   - `MONGODB_URI` = `mongodb+srv://<username>:<password>@your-cluster.mongodb.net/shopsphere?retryWrites=true&w=majority`
+   - `JWT_SECRET` = `your_strong_jwt_production_secret`
+   - `NODE_ENV` = `production`
+6. Click **Deploy**.
+
+> 🌐 **MongoDB Atlas Network Access Tip:** Ensure you have added `0.0.0.0/0` (Allow Access from Anywhere) under **Network Access** in MongoDB Atlas so Vercel's serverless edge instances can connect without IP restrictions.
+
+---
+
+## 🧭 Limitations & Future Roadmap
+
+### Current Boundaries
+- **Simulated Payment Processing:** Checkout verifies address and updates order status with simulated payment confirmation. It does not currently integrate a third-party gateway (e.g., Stripe, Razorpay) webhook.
+- **Client-Side Templating:** Frontend relies on vanilla multi-page HTML documents with dynamic client fetch rendering rather than server-side rendering (SSR).
+
+### Future Roadmap
+- [ ] Integrate **Razorpay / Stripe** payment gateway with signed webhook verifications.
+- [ ] Add **OAuth 2.0 Social Sign-In** (Google & GitHub authentication).
+- [ ] Implement **Automated Email Notifications** via Nodemailer / SendGrid for order receipts and shipping updates.
+- [ ] Build an **Enhanced Admin Analytics Dashboard** with sales charts and revenue metrics.
+- [ ] Add automated unit and integration tests using **Jest** and **Supertest**.
+
+---
+
+## 👤 Author & Acknowledgments
+
+- **Developer:** Shree (Prathamesh Patil)
+- **GitHub:** [@Shree0802](https://github.com/Shree0802)
+- **Project:** Created as part of the **CodeAlpha Full-Stack Development Internship**
+
+Special thanks to the open-source community for the tools, libraries, and resources that made this project possible.
 
 ---
 
 ## 📄 License
-Distributed under the **MIT License**. Created for **CodeAlpha Internship Evaluation**.
+
+This project is licensed under the **ISC License** — see the [package.json](package.json) file for details.
+
+```text
+Copyright (c) 2026 CodeAlpha Intern / Shree0802
+
+Permission to use, copy, modify, and/or distribute this software for any
+purpose with or without fee is hereby granted, provided that the above
+copyright notice and this permission notice appear in all copies.
+```
+
+---
+
+<div align="center">
+  <sub>Built with ❤️ for the CodeAlpha Full-Stack Development Internship.</sub>
+</div>
