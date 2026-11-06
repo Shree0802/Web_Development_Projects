@@ -634,5 +634,5 @@ copyright notice and this permission notice appear in all copies.
 ---
 
 <div align="center">
-  <sub>Built with ❤️ for the CodeAlpha Full-Stack Development Internship.</sub>
+  <sub>Designed & Developed ❤️ by Prathamesh B. Patil.</sub>
 </div>
