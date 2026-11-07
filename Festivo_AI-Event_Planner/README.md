@@ -39,7 +39,17 @@
 
 ---
 
-![Festivo AI Dashboard](Festivo_AI.png)
+<div align="center">
+
+<a href="https://festivo-ai-event-planner.vercel.app/" target="_blank">
+  <img
+    src="Festivo_AI.png"
+    width="90%"
+    alt="Festivo AI Live Website"
+  />
+</a>
+
+</div>
 
 ---
 
