@@ -1,0 +1,43 @@
+name: Festivo AI CI/CD & Validation
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  validate-and-test:
+    name: Build, Test & Size Verification
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Codebase
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Setup Node.js Environment
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install All Dependencies
+        run: npm run install:all
+
+      - name: Run Test Suite (Vitest)
+        run: npm test
+
+      - name: Build Full Project (Frontend & Backend)
+        run: npm run build
+
+      - name: Verify Competition Repository Size (< 10 MB)
+        run: |
+          REPO_SIZE_KB=$(git count-objects -v | grep 'size-pack\|size:' | awk '{sum+=$2} END {print sum}')
+          echo "Current Repository Size: ${REPO_SIZE_KB} KB"
+          if [ "${REPO_SIZE_KB}" -gt 10240 ]; then
+            echo "ERROR: Repository size exceeds 10 MB competition limit!"
+            exit 1
+          else
+            echo "SUCCESS: Repository size is well under 10 MB limit (${REPO_SIZE_KB} KB / 10240 KB)."
+          fi
