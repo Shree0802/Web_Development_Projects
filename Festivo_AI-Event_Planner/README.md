@@ -1,6 +1,6 @@
 <div align="center">
 
-# 🎊 Festivo AI
+# 🎊 Festivo_AI
 ### *Every Celebration, Beautifully Planned.*
 
 **An Intelligent AI-Powered Event Planning and Management SaaS Platform**  
