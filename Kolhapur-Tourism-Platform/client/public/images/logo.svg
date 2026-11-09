@@ -1,0 +1,139 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <!-- Background Gradient -->
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0A2540" />
+      <stop offset="50%" stop-color="#102E4E" />
+      <stop offset="100%" stop-color="#07192A" />
+    </linearGradient>
+
+    <!-- Ring Gradient -->
+    <linearGradient id="ringGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FF7900" />
+      <stop offset="45%" stop-color="#0878D1" />
+      <stop offset="80%" stop-color="#1267B0" />
+      <stop offset="100%" stop-color="#FFA439" />
+    </linearGradient>
+
+    <!-- Sun & Kiranotsav Gradient -->
+    <linearGradient id="sunGrad" x1="0%" y1="100%" x2="0%" y2="0%">
+      <stop offset="0%" stop-color="#FF7900" />
+      <stop offset="60%" stop-color="#FFA439" />
+      <stop offset="100%" stop-color="#FFE082" />
+    </linearGradient>
+
+    <!-- Temple Gold Gradient -->
+    <linearGradient id="templeGold" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#FFF2B2" />
+      <stop offset="40%" stop-color="#F5A623" />
+      <stop offset="100%" stop-color="#D97706" />
+    </linearGradient>
+
+    <!-- Fort Battlements Silver Gradient -->
+    <linearGradient id="fortSilver" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#FFFFFF" />
+      <stop offset="100%" stop-color="#94A3B8" />
+    </linearGradient>
+
+    <!-- Orbit Travel Swoop Gradient -->
+    <linearGradient id="swoopGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0878D1" stop-opacity="0.1" />
+      <stop offset="40%" stop-color="#0878D1" />
+      <stop offset="70%" stop-color="#FF7900" />
+      <stop offset="100%" stop-color="#FFB049" />
+    </linearGradient>
+
+    <!-- Water Waves Gradient -->
+    <linearGradient id="waterGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#0878D1" stop-opacity="0.1" />
+      <stop offset="50%" stop-color="#38BDF8" />
+      <stop offset="100%" stop-color="#0878D1" stop-opacity="0.1" />
+    </linearGradient>
+    
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="8" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <!-- Outer Ring with Gradient -->
+  <circle cx="256" cy="256" r="248" fill="url(#bgGrad)" stroke="url(#ringGrad)" stroke-width="12" />
+
+  <!-- Inner Subtle Ring -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="#FFFFFF" stroke-opacity="0.12" stroke-width="2" stroke-dasharray="6,6" />
+
+  <!-- Radiant Kiranotsav Rising Sun -->
+  <circle cx="256" cy="210" r="82" fill="url(#sunGrad)" opacity="0.95" filter="url(#glow)" />
+  
+  <!-- Geometric Sun Rays (Kiranotsav) -->
+  <g stroke="url(#sunGrad)" stroke-width="3.5" opacity="0.85" stroke-linecap="round">
+    <line x1="256" y1="108" x2="256" y2="85" />
+    <line x1="210" y1="122" x2="192" y2="104" />
+    <line x1="302" y1="122" x2="320" y2="104" />
+    <line x1="172" y1="162" x2="150" y2="150" />
+    <line x1="340" y1="162" x2="362" y2="150" />
+    <line x1="158" y1="210" x2="135" y2="210" />
+    <line x1="354" y1="210" x2="377" y2="210" />
+  </g>
+
+  <!-- Maratha Fort Ramparts (Panhala Bastions) in Background -->
+  <path d="M 86 350 
+           L 86 295 
+           L 115 295 L 115 312 L 135 312 L 135 295 L 160 295 L 160 312 L 180 312 L 180 295 L 205 295 L 205 350 Z" 
+        fill="url(#fortSilver)" opacity="0.95" />
+
+  <path d="M 426 350 
+           L 426 295 
+           L 397 295 L 397 312 L 377 312 L 377 295 L 352 295 L 352 312 L 332 312 L 332 295 L 307 295 L 307 350 Z" 
+        fill="url(#fortSilver)" opacity="0.95" />
+
+  <!-- Historic Ambabai Temple Shikhara (Central Majestic Spire) -->
+  <g id="templeSpire">
+    <!-- Base Plinth -->
+    <rect x="186" y="335" width="140" height="25" rx="4" fill="url(#templeGold)" />
+    
+    <!-- Lower Sanctum Tier -->
+    <path d="M 198 335 L 210 275 L 302 275 L 314 335 Z" fill="url(#templeGold)" />
+    <!-- Architectural Arched Doorway -->
+    <path d="M 238 335 A 18 18 0 0 1 274 335 Z" fill="#0A2540" />
+    <circle cx="256" cy="305" r="7" fill="#FF7900" />
+
+    <!-- Middle Hemadpanthi Tier -->
+    <path d="M 214 275 L 226 225 L 286 225 L 298 275 Z" fill="#FFE79A" />
+    <line x1="228" y1="250" x2="284" y2="250" stroke="#D97706" stroke-width="2.5" />
+
+    <!-- Upper Shikhara Spire with Amalaka -->
+    <path d="M 230 225 L 246 165 L 266 165 L 282 225 Z" fill="url(#templeGold)" />
+    
+    <!-- Sacred Amalaka Stone Ribs -->
+    <ellipse cx="256" cy="163" rx="19" ry="7" fill="#FFD15C" stroke="#D97706" stroke-width="1.5" />
+    
+    <!-- Golden Kalash Finial (Crown) -->
+    <path d="M 251 156 C 249 146, 251 138, 256 130 C 261 138, 263 146, 261 156 Z" fill="#FFFFFF" />
+    <circle cx="256" cy="126" r="5" fill="#FF7900" />
+  </g>
+
+  <!-- Front Fortress Bastions Bridge / Stone Wall -->
+  <path d="M 80 345 Q 256 362 432 345 L 432 388 Q 256 408 80 388 Z" fill="#132238" />
+  <path d="M 90 350 Q 256 367 422 350" stroke="#FF7900" stroke-width="2.5" fill="none" opacity="0.8" />
+
+  <!-- Rankala Lake Serene Water Waves at Base -->
+  <path d="M 120 408 Q 188 397 256 408 T 392 408" stroke="url(#waterGrad)" stroke-width="4.5" fill="none" stroke-linecap="round" />
+  <path d="M 150 425 Q 203 416 256 425 T 362 425" stroke="url(#waterGrad)" stroke-width="3" fill="none" stroke-linecap="round" opacity="0.6" />
+
+  <!-- Dynamic Orbiting Travel Arc (Swoop with Star) -->
+  <path d="M 68 310 C 58 170, 160 70, 290 75 C 375 78, 440 135, 448 220" 
+        fill="none" stroke="url(#swoopGrad)" stroke-width="6.5" stroke-linecap="round" stroke-dasharray="140 18 35 18" />
+  
+  <!-- Sparkling Compass Star on Orbit -->
+  <g transform="translate(448, 220)">
+    <path d="M 0 -20 L 4.5 -5.5 L 19 0 L 4.5 5.5 L 0 20 L -4.5 5.5 L -19 0 L -4.5 -5.5 Z" fill="#FF7900" />
+    <circle cx="0" cy="0" r="4" fill="#FFFFFF" />
+  </g>
+
+  <!-- Registered Trademark 'TM' Seal Badge at Bottom Center -->
+  <g transform="translate(256, 448)">
+    <rect x="-42" y="-15" width="84" height="26" rx="13" fill="#0878D1" stroke="#FFFFFF" stroke-width="2" />
+    <text x="0" y="4" font-family="system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="13" font-weight="900" fill="#FFFFFF" text-anchor="middle" letter-spacing="2">TM</text>
+  </g>
+</svg>
