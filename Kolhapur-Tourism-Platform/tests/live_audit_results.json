@@ -1,0 +1,553 @@
+{
+  "timestamp": "2026-11-10T03:58:57.761Z",
+  "targetUrl": "https://kolhapur-tourism-platform.vercel.app",
+  "backendUrl": "https://kolhapur-tourism-platform.onrender.com",
+  "routesTested": [
+    {
+      "path": "/",
+      "name": "Homepage",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/destinations",
+      "name": "Explore Destinations",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/destinations/mahalakshmi-temple",
+      "name": "Destination Detail: Mahalakshmi",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/destinations/panhala-fort",
+      "name": "Destination Detail: Panhala Fort",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/hotels",
+      "name": "Hotels Directory",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/hotels/sayaji-hotel",
+      "name": "Hotel Detail: Sayaji Hotel",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/tours",
+      "name": "Curated Tours & Packages",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/food-and-culture",
+      "name": "Culinary & Living Culture",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/temples",
+      "name": "Sacred Temples Directory",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/history",
+      "name": "Maratha Royal History",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/nature",
+      "name": "Nature & Eco-Tourism",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/gallery",
+      "name": "Visual Media Gallery",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/itinerary",
+      "name": "AI Travel Planner",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/book",
+      "name": "Booking Engine",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/dashboard",
+      "name": "Traveler Dashboard",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/admin",
+      "name": "Admin Console Guard",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/about",
+      "name": "About Kolhapur",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/contact",
+      "name": "Contact & Support",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/events",
+      "name": "Festivals & Events",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/faq",
+      "name": "FAQ & Tips",
+      "status": 200,
+      "refreshStatus": 200
+    },
+    {
+      "path": "/map",
+      "name": "Interactive Map",
+      "status": 200,
+      "refreshStatus": 200
+    }
+  ],
+  "networkFailures": [],
+  "consoleErrors": [],
+  "brokenImages": [],
+  "functionalTests": [
+    {
+      "phase": "Route",
+      "name": "Access Homepage (/)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:58:59.158Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Explore Destinations (/destinations)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:00.176Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Destination Detail: Mahalakshmi (/destinations/mahalakshmi-temple)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:00.895Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Destination Detail: Panhala Fort (/destinations/panhala-fort)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:01.549Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Hotels Directory (/hotels)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:02.178Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Hotel Detail: Sayaji Hotel (/hotels/sayaji-hotel)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:02.843Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Curated Tours & Packages (/tours)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:03.574Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Culinary & Living Culture (/food-and-culture)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:05.275Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Sacred Temples Directory (/temples)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:06.111Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Maratha Royal History (/history)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:06.750Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Nature & Eco-Tourism (/nature)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:07.375Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Visual Media Gallery (/gallery)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:09.029Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access AI Travel Planner (/itinerary)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:09.668Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Booking Engine (/book)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:10.381Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Traveler Dashboard (/dashboard)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:11.022Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Admin Console Guard (/admin)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:11.647Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access About Kolhapur (/about)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:12.270Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Contact & Support (/contact)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:12.908Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Festivals & Events (/events)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:13.546Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access FAQ & Tips (/faq)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:14.171Z"
+    },
+    {
+      "phase": "Route",
+      "name": "Access Interactive Map (/map)",
+      "passed": true,
+      "details": "HTTP 200, Refresh HTTP 200",
+      "timestamp": "2026-11-10T03:59:15.849Z"
+    },
+    {
+      "phase": "Images",
+      "name": "Verify Homepage Images Render with Valid Natural Width",
+      "passed": true,
+      "details": "All images loaded successfully",
+      "timestamp": "2026-11-10T03:59:19.632Z"
+    },
+    {
+      "phase": "Images",
+      "name": "Verify Experience Kolhapur Section Visibility",
+      "passed": true,
+      "details": "Section heading rendered",
+      "timestamp": "2026-11-10T03:59:19.660Z"
+    },
+    {
+      "phase": "Images",
+      "name": "Destination Cards Rendered",
+      "passed": true,
+      "details": "Found 14 destination cards",
+      "timestamp": "2026-11-10T03:59:20.471Z"
+    },
+    {
+      "phase": "API",
+      "name": "Vercel Proxy: Get All Destinations (/api/destinations)",
+      "passed": true,
+      "details": "HTTP 200, Count: 11",
+      "timestamp": "2026-11-10T03:59:22.269Z"
+    },
+    {
+      "phase": "API",
+      "name": "Vercel Proxy: Get All Hotels (/api/hotels)",
+      "passed": true,
+      "details": "HTTP 200, Count: 4",
+      "timestamp": "2026-11-10T03:59:22.589Z"
+    },
+    {
+      "phase": "API",
+      "name": "Vercel Proxy: Get All Tours (/api/tours)",
+      "passed": true,
+      "details": "HTTP 200, Count: 6",
+      "timestamp": "2026-11-10T03:59:22.904Z"
+    },
+    {
+      "phase": "API",
+      "name": "Vercel Proxy: Get All Events (/api/events)",
+      "passed": true,
+      "details": "HTTP 200, Count: 4",
+      "timestamp": "2026-11-10T03:59:23.232Z"
+    },
+    {
+      "phase": "API",
+      "name": "Vercel Proxy: Get Weather Forecast (/api/weather)",
+      "passed": true,
+      "details": "HTTP 200, Count: 1",
+      "timestamp": "2026-11-10T03:59:23.553Z"
+    },
+    {
+      "phase": "API",
+      "name": "Vercel Proxy: Get Verified Reviews (/api/reviews)",
+      "passed": true,
+      "details": "HTTP 200, Count: 3",
+      "timestamp": "2026-11-10T03:59:23.857Z"
+    },
+    {
+      "phase": "Auth",
+      "name": "Register New User & Establish Live Session",
+      "passed": true,
+      "details": "Logged in as: Pooja Kulkarni (pooja.travel_1794283163857@kolhapur.com)",
+      "timestamp": "2026-11-10T03:59:27.899Z"
+    },
+    {
+      "phase": "Auth",
+      "name": "Verify Session Persistence Across Page Reload",
+      "passed": true,
+      "details": "JWT Token and user state preserved in localStorage",
+      "timestamp": "2026-11-10T03:59:29.034Z"
+    },
+    {
+      "phase": "Interactions",
+      "name": "Submit Review & Add to Wishlist on Live Destination Page",
+      "passed": true,
+      "details": "Mahalakshmi Temple reviewed & wishlisted",
+      "timestamp": "2026-11-10T03:59:30.953Z"
+    },
+    {
+      "phase": "AI",
+      "name": "Generate & Save AI Itinerary on Live Platform",
+      "passed": true,
+      "details": "3-Day custom sequence generated and saved",
+      "timestamp": "2026-11-10T03:59:36.503Z"
+    },
+    {
+      "phase": "Booking",
+      "name": "Submit Tour Booking & Generate Reference Code",
+      "passed": true,
+      "details": "Booking Reference: KOL-2026-TLAP",
+      "timestamp": "2026-11-10T03:59:41.863Z"
+    },
+    {
+      "phase": "Booking",
+      "name": "Verify Live REST Booking Tracking Endpoint",
+      "passed": true,
+      "details": "Status: Confirmed, Destination: Heritage Divine Darshan",
+      "timestamp": "2026-11-10T03:59:42.400Z"
+    },
+    {
+      "phase": "Dashboard",
+      "name": "Verify User Dashboard Aggregates Bookings & Plans",
+      "passed": true,
+      "details": "Bookings, Saved Plans and Wishlist tabs verified",
+      "timestamp": "2026-11-10T03:59:44.495Z"
+    },
+    {
+      "phase": "Admin",
+      "name": "Admin Dashboard Access & Metrics Loading",
+      "passed": true,
+      "details": "Administration portal metrics rendered",
+      "timestamp": "2026-11-10T03:59:48.479Z"
+    },
+    {
+      "phase": "Admin",
+      "name": "Update Booking Status via Live Admin Table",
+      "passed": true,
+      "details": "Status changed to 'Confirmed' for KOL-2026-TLAP",
+      "timestamp": "2026-11-10T03:59:50.008Z"
+    },
+    {
+      "phase": "Contact",
+      "name": "Submit Customer Inquiry on Live Platform",
+      "passed": true,
+      "details": "Contact message sent and acknowledged",
+      "timestamp": "2026-11-10T03:59:51.211Z"
+    },
+    {
+      "phase": "Responsive",
+      "name": "Viewport: Mobile Small (320px)",
+      "passed": true,
+      "details": "No overflow, responsive layout intact",
+      "timestamp": "2026-11-10T03:59:51.782Z"
+    },
+    {
+      "phase": "Responsive",
+      "name": "Viewport: Mobile Medium (375px)",
+      "passed": true,
+      "details": "No overflow, responsive layout intact",
+      "timestamp": "2026-11-10T03:59:55.835Z"
+    },
+    {
+      "phase": "Responsive",
+      "name": "Viewport: Mobile Large (425px)",
+      "passed": true,
+      "details": "No overflow, responsive layout intact",
+      "timestamp": "2026-11-10T03:59:56.657Z"
+    },
+    {
+      "phase": "Responsive",
+      "name": "Viewport: Tablet Portrait (768px)",
+      "passed": true,
+      "details": "No overflow, responsive layout intact",
+      "timestamp": "2026-11-10T03:59:57.585Z"
+    },
+    {
+      "phase": "Responsive",
+      "name": "Viewport: Tablet Landscape (1024px)",
+      "passed": true,
+      "details": "No overflow, responsive layout intact",
+      "timestamp": "2026-11-10T03:59:58.429Z"
+    },
+    {
+      "phase": "Responsive",
+      "name": "Viewport: Laptop Standard (1280px)",
+      "passed": true,
+      "details": "No overflow, responsive layout intact",
+      "timestamp": "2026-11-10T03:59:59.261Z"
+    },
+    {
+      "phase": "Responsive",
+      "name": "Viewport: Desktop Wide (1440px)",
+      "passed": true,
+      "details": "No overflow, responsive layout intact",
+      "timestamp": "2026-11-10T04:00:00.102Z"
+    },
+    {
+      "phase": "Responsive",
+      "name": "Viewport: UltraWide (1920px)",
+      "passed": true,
+      "details": "No overflow, responsive layout intact",
+      "timestamp": "2026-11-10T04:00:01.624Z"
+    }
+  ],
+  "responsiveTests": [
+    {
+      "viewport": {
+        "width": 320,
+        "height": 640,
+        "label": "Mobile Small (320px)"
+      },
+      "hasHorizontalScroll": false,
+      "screenshot": "responsive_320x640.png"
+    },
+    {
+      "viewport": {
+        "width": 375,
+        "height": 667,
+        "label": "Mobile Medium (375px)"
+      },
+      "hasHorizontalScroll": false,
+      "screenshot": "responsive_375x667.png"
+    },
+    {
+      "viewport": {
+        "width": 425,
+        "height": 850,
+        "label": "Mobile Large (425px)"
+      },
+      "hasHorizontalScroll": false,
+      "screenshot": "responsive_425x850.png"
+    },
+    {
+      "viewport": {
+        "width": 768,
+        "height": 1024,
+        "label": "Tablet Portrait (768px)"
+      },
+      "hasHorizontalScroll": false,
+      "screenshot": "responsive_768x1024.png"
+    },
+    {
+      "viewport": {
+        "width": 1024,
+        "height": 768,
+        "label": "Tablet Landscape (1024px)"
+      },
+      "hasHorizontalScroll": false,
+      "screenshot": "responsive_1024x768.png"
+    },
+    {
+      "viewport": {
+        "width": 1280,
+        "height": 800,
+        "label": "Laptop Standard (1280px)"
+      },
+      "hasHorizontalScroll": false,
+      "screenshot": "responsive_1280x800.png"
+    },
+    {
+      "viewport": {
+        "width": 1440,
+        "height": 900,
+        "label": "Desktop Wide (1440px)"
+      },
+      "hasHorizontalScroll": false,
+      "screenshot": "responsive_1440x900.png"
+    },
+    {
+      "viewport": {
+        "width": 1920,
+        "height": 1080,
+        "label": "UltraWide (1920px)"
+      },
+      "hasHorizontalScroll": false,
+      "screenshot": "responsive_1920x1080.png"
+    }
+  ],
+  "summary": {
+    "total": 48,
+    "passed": 48,
+    "failed": 0
+  }
+}
