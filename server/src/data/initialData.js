@@ -1,0 +1,1316 @@
+// Initial Seed Data for Kolhapur Tourism Discovery & Travel Planning Platform
+// Preserves and refines all original assets, correcting spelling errors and adding verified details.
+
+const bcrypt = require('bcryptjs');
+
+const initialData = {
+  users: [
+    {
+      id: "usr_admin_01",
+      name: "Kolhapur Tourism Admin",
+      email: "admin@kolhapurtourism.com",
+      passwordHash: bcrypt.hashSync("Admin@123", 10),
+      role: "admin",
+      phone: "+91 9021830410",
+      city: "Kolhapur",
+      avatar: "https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150",
+      createdAt: "2026-01-01T00:00:00.000Z"
+    },
+    {
+      id: "usr_demo_02",
+      name: "Rohit Shinde",
+      email: "traveler@kolhapur.com",
+      passwordHash: bcrypt.hashSync("Traveler@123", 10),
+      role: "user",
+      phone: "+91 9876543210",
+      city: "Pune",
+      avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150",
+      createdAt: "2026-02-15T00:00:00.000Z"
+    }
+  ],
+
+  destinations: [
+    {
+      id: "mahalakshmi-temple",
+      name: "Shri Mahalakshmi (Ambabai) Temple",
+      marathiName: "श्री महालक्ष्मी (अंबाबाई) मंदिर",
+      category: "temple",
+      tag: "Spiritual Marvel",
+      distanceKm: 2.5,
+      image: "/images/destination-1.jpg",
+      gallery: [
+        "/images/destination-1.jpg",
+        "/images/mahalaxmi_temple2.jpg",
+        "/images/hero.jpg"
+      ],
+      shortDescription: "Sacred 7th-century Chalukyan pilgrimage shrine dedicated to Goddess Mahalakshmi, renowned for the biannual Kiranotsav sun-ray phenomenon and Hemadpanthi architecture.",
+      overview: "The Mahalakshmi Temple of Kolhapur (lovingly worshipped as Ambabai) is one of the 18 Maha Shakti Peethas mentioned in ancient scriptures. Revered as Dakshin Kashi, pilgrims believe a visit to Varanasi remains incomplete without paying homage to Goddess Mahalakshmi here. Architecturally constructed in basalt stone during the Chalukya and Shilahara eras, the shrine boasts a unique westward orientation.",
+      history: "The temple's origins trace to the Chalukya dynasty around 700 CE under King Karandev. It received royal patronage across centuries from the Rashtrakutas, Shilaharas of Karad, and Yadavas of Devagiri. In the 11th century, King Gandaraditya of the Shilahara dynasty expanded the sanctum and constructed the circumambulatory pradakshina path. The Maratha rulers later restored and fortified the complex, adding the majestic wooden Garuda Mandap between 1838 and 1843.",
+      architecture: "Exemplifies mature Hemadpanthi stone architecture with mortarless dry stone masonry. The central idol is sculpted from monolithic black gemstone, standing nearly 3 feet tall and weighing approximately 40 kg. Uniquely facing west (Pashchim), the sanctum welcomes the setting sun rays twice a year during the 'Kiranotsav' festival, illuminating the deity's feet, chest, and crown. The complex features four imposing gateways (Mahadwar on the west), towering deepamalas, and stone relief friezes depicting mythological episodes.",
+      bestTimeToVisit: "October to March (Pleasant weather; Navratri & Kiranotsav occur during this period)",
+      suggestedDuration: "2 - 3 Hours",
+      openingHours: "05:00 AM - 10:30 PM (Daily)",
+      isOpeningHoursVerified: true,
+      entryFee: "Free General Darshan; Special line passes available through Devasthan Trust",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Mahadwar Road, B Ward, C/O Devasthan Trust, Kolhapur, Maharashtra 416012",
+        lat: 16.6944,
+        lng: 74.2238
+      },
+      howToReach: {
+        air: "Kolhapur Airport (KLH) at Ujalaiwadi is 10 km away. Regular flights from Mumbai, Bengaluru, and Hyderabad.",
+        rail: "Chhatrapati Shahu Maharaj Terminus (CSMT Kolhapur) is 3 km away. Auto-rickshaws and city buses operate round-the-clock.",
+        road: "Central Bus Stand (CBS) is 3.5 km away. Frequent MSRTC Shivshahi and private buses connect from Pune (235 km), Mumbai (380 km), and Goa (200 km)."
+      },
+      travelTips: [
+        "Traditional modest Indian dress is mandatory for entering the sanctum sanctorum (no shorts or sleeveless outfits).",
+        "Expect heavy footfall during Navratri (October) and Tuesdays/Fridays; utilize early morning 5:30 AM slots for peaceful darshan.",
+        "Photography inside the inner sanctum is strictly prohibited by the temple management.",
+        "Footwear deposit stalls and safe locker facilities are available near the Mahadwar gate."
+      ],
+      nearbyAttractions: [
+        "Bhavani Mandap (300m)",
+        "New Palace Museum (3.8 km)",
+        "Rankala Lake (2.5 km)"
+      ],
+      featured: true,
+      rating: 4.9,
+      reviewCount: 1420
+    },
+    {
+      id: "jyotiba-temple",
+      name: "Jyotiba Temple (Wadi Ratnagiri)",
+      marathiName: "श्री जोतिबा मंदिर (वाडी रत्नागिरी)",
+      category: "temple",
+      tag: "Hilltop Sanctum",
+      distanceKm: 18.0,
+      image: "/images/destination-2.jpg",
+      gallery: [
+        "/images/destination-2.jpg",
+        "/images/temple_t3buvqlA_202408141307420.jpeg"
+      ],
+      shortDescription: "Perched atop the scenic Sahyadri peaks, dedicated to Lord Jyotiba (an embodiment of the Trinity). Famous for towering Sasan Kathi banners and vibrant pink gulal celebrations.",
+      overview: "Situated at an elevation of nearly 3,124 feet on Wadi Ratnagiri hill, Jyotiba Temple is consecrated to Lord Kedarling (Jyotiba), believed to be an incarnation of Brahma, Vishnu, and Mahesh. The hill commands breathtaking panoramic vistas of the surrounding valleys, windmills, and sugarcane fields of the Panchaganga basin.",
+      history: "Legend recounts that Lord Jyotiba assisted Goddess Mahalakshmi in defeating demons Kolhasura and Ratnasura. Devotee Navji Saya (Kedar Baba) established the earliest shrine. In 1730 CE, Maharaja Ranoji Shinde of Gwalior reconstructed the principal temple in black basalt, followed by further royal embellishments by Daulat Rao Shinde.",
+      architecture: "The temple precinct comprises three primary stone shrines: the main Jyotiba Temple, Kedareshwar, and Ramling, alongside smaller sanctuaries for Yamai and Kalabhairav. Built from fine black basalt stone by master Kedar artisans, the spire rises 77 feet. The stone courtyards are famous for the radiant pink hue created by millions of pilgrims showering herbal gulal.",
+      bestTimeToVisit: "November to February; Chaitra Poornima (April) for the monumental annual fair",
+      suggestedDuration: "3 - 4 Hours",
+      openingHours: "05:30 AM - 09:30 PM (Daily)",
+      isOpeningHoursVerified: true,
+      entryFee: "Free Entry",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Wadi Ratnagiri, Panhala Taluka, Kolhapur District, Maharashtra 416229",
+        lat: 16.7997,
+        lng: 74.1755
+      },
+      howToReach: {
+        air: "Kolhapur Airport (KLH) is 30 km away.",
+        rail: "Kolhapur Railway Station is 18 km away.",
+        road: "Well-paved scenic ghat road from Kolhapur city via Kerli and Kusgawda (35-45 minutes drive). State transport buses run every 30 minutes from Kolhapur CBS."
+      },
+      travelTips: [
+        "Carry sunglasses and scarf to protect from flying pink gulal on festive days.",
+        "Ghat road has winding curves; drive cautiously during monsoon mist.",
+        "Taste local sugarcane juice and pitla-bhakri at roadside stalls along the hill climb."
+      ],
+      nearbyAttractions: [
+        "Panhala Fort (14 km)",
+        "Rankala Lake (18 km)",
+        "Pawan Khind (60 km)"
+      ],
+      featured: true,
+      rating: 4.8,
+      reviewCount: 980
+    },
+    {
+      id: "kopeshwar-temple",
+      name: "Kopeshwar Temple (Khidrapur)",
+      marathiName: "कोपेश्वर मंदिर (खिद्रापूर)",
+      category: "temple",
+      tag: "Architectural Wonder",
+      distanceKm: 60.0,
+      image: "/images/destination-3.jpg",
+      gallery: [
+        "/images/destination-3.jpg",
+        "/images/Kopeshwar_Temple-Khidrapur-Maharashtra1.webp"
+      ],
+      shortDescription: "A 12th-century Chalukya-Shilahara masterpiece along the Krishna River with a celestial open-air Swarga Mandapa supported by 48 carved pillars and no Nandi bull.",
+      overview: "Located on the banks of the Krishna River at Khidrapur near the Maharashtra-Karnataka border, Kopeshwar Temple is widely recognized as one of India's finest stone architectural wonders. Consecrated to Lord Shiva as Kopeshwar ('The Wrathful Lord'), it features an open celestial amphitheater called Swarga Mandapa with a dramatic circular skylight.",
+      history: "Initiated in the 7th century under Badami Chalukyas, the temple attained its current grandeur in the 12th century under Shilahara King Gandaraditya and King Singhanadev of the Devagiri Yadavas (circa 1214 CE). Mythologically, Shiva was pacified here by Vishnu after Sati's self-immolation, leading to the co-existence of both Kopeshwar and Dhopeshwar shivalingas.",
+      architecture: "The open-to-sky Swarga Mandapa features 48 monolithic stone pillars, each carved with intricate geometrical patterns and celestial apsaras. The central ceiling opens 13 feet wide to the sky. The adjoining Sabha Mandapa contains 60 intricately carved pillars depicting Ramayana and Panchatantra narratives. The exterior plinth rests upon a herd of 92 masterfully carved elephants.",
+      bestTimeToVisit: "July to February (Pleasant winter and lush post-monsoon greenery along Krishna river)",
+      suggestedDuration: "2 - 3 Hours",
+      openingHours: "06:00 AM - 08:00 PM (Daily)",
+      isOpeningHoursVerified: true,
+      entryFee: "Free Entry (Protected Monument under Archaeological Survey of India)",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Khidrapur Village, Shirol Taluka, Kolhapur District, Maharashtra 416108",
+        lat: 16.7118,
+        lng: 74.6908
+      },
+      howToReach: {
+        air: "Belagavi Airport (IXG) is 85 km; Kolhapur Airport (KLH) is 60 km.",
+        rail: "Miraj Junction (MRJ) is 40 km; Kolhapur Station is 60 km.",
+        road: "Accessible via Kolhapur-Jaysingpur-Kurundwad route (1.5 hours scenic drive through sugarcane farms)."
+      },
+      travelTips: [
+        "Visit during early morning or golden hour for magical sunbeam photography through the Swarga Mandapa skylight.",
+        "Combine your visit with nearby Narsobawadi Dattatreya Temple (20 km away).",
+        "Engage local registered guides to understand the intricate iconographic stories on the pillars."
+      ],
+      nearbyAttractions: [
+        "Narsobawadi Dattatreya Temple (22 km)",
+        "Sangli Ganpati Temple (52 km)"
+      ],
+      featured: true,
+      rating: 4.9,
+      reviewCount: 740
+    },
+    {
+      id: "panhala-fort",
+      name: "Panhala Fort (Panhalgad)",
+      marathiName: "पन्हाळा किल्ला (पन्हाळगड)",
+      category: "historical",
+      tag: "Maratha Stronghold",
+      distanceKm: 21.0,
+      image: "/images/activity-2.jpg",
+      gallery: [
+        "/images/activity-2.jpg",
+        "/images/Panahala Fort.webp"
+      ],
+      shortDescription: "Perched 400m above the Deccan plateau with over 7 km of historic ramparts, Teen Darwaza, Sajja Kothi, and the legendary saga of Chhatrapati Shivaji Maharaj's midnight escape.",
+      overview: "Panhala Fort is one of the largest and most historic hill forts in the Western Ghats. Overlooking the crucial trade passes linking the Konkan coast to the Deccan interior, it was beloved by Chhatrapati Shivaji Maharaj, who spent more than 500 days here. The hill station enjoys a cool, invigorating hill climate year-round.",
+      history: "Built by Shilahara Raja Bhoja II between 1178 and 1209 CE, it subsequently saw Yadava, Bahmani, Adil Shahi, Maratha, and British control. In July 1660, under Siddi Jauhar's siege, Shivaji Maharaj executed his legendary midnight escape from Panhala to Vishalgad through torrential rain, immortalized by the sacrifice of warrior hero Baji Prabhu Deshpande at Pavan Khind.",
+      architecture: "Spanning a perimeter of 7.25 km with double-walled stone ramparts, the fort features Teen Darwaza (three sequential defense gates), Ambarkhana (massive tripartite royal granaries holding 25,000 khandis of grain), Sajja Kothi (viewpoint pavilion where Sambhaji Maharaj resided), and Andharbav (concealed three-storeyed well structure designed to withstand water poisoning).",
+      bestTimeToVisit: "June to February (Monsoon transforms the fort into a mist-shrouded green paradise)",
+      suggestedDuration: "Half Day to Full Day",
+      openingHours: "06:00 AM - 06:30 PM (Daily)",
+      isOpeningHoursVerified: true,
+      entryFee: "Nominal ASI vehicle entry fee: ₹50 for cars; Monument entry free",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Panhala Hill Station, Kolhapur District, Maharashtra 416201",
+        lat: 16.8143,
+        lng: 74.1082
+      },
+      howToReach: {
+        air: "Kolhapur Airport is 32 km away.",
+        rail: "Kolhapur Railway Station is 21 km away.",
+        road: "Direct state highway from Kolhapur (30-40 mins). Frequent ST buses depart Kolhapur CBS every 20 minutes."
+      },
+      travelTips: [
+        "Wear comfortable walking shoes with grip; fort trails involve cobblestone steps.",
+        "Monsoon visits offer gorgeous waterfalls cascading down the ramparts.",
+        "Taste local Kanda Bhaji and hot tea at the Teen Darwaza stalls."
+      ],
+      nearbyAttractions: [
+        "Jyotiba Temple (14 km)",
+        "Rankala Lake (20 km)",
+        "Pawan Khind & Vishalgad (55 km)"
+      ],
+      featured: true,
+      rating: 4.8,
+      reviewCount: 1120
+    },
+    {
+      id: "rankala-lake",
+      name: "Rankala Lake & Padmaraje Promenade",
+      marathiName: "रंकाळा तलाव आणि पद्मराजे उद्यान",
+      category: "nature",
+      tag: "City Oasis & Sunsets",
+      distanceKm: 2.0,
+      image: "/images/activity-3.jpg",
+      gallery: [
+        "/images/activity-3.jpg",
+        "/images/Rankala.jpg",
+        "/images/b3d1ff0ccdc77b06a46960665075a4f7_1000x1000.jpg"
+      ],
+      shortDescription: "A historic 107-hectare freshwater lake formed from an ancient stone quarry, famed for magical sunset reflections, Shalini Palace backdrop, boating, and vibrant Chowpatty street food.",
+      overview: "Rankala Lake is the recreational heart of Kolhapur. Spanning 107 hectares, it was transformed into a majestic lake by royal Maratha patronage. The lake is enveloped by a landscaped promenade, Padmaraje Gardens, children's play parks, boating piers, and a bustling evening food street.",
+      history: "Prior to the 9th century, the site was an expansive basalt quarry. An earthquake created a natural depression that was fed by subterranean streams and local catchments. Later, King Shahu Maharaj and royal rulers fortified the stone embankments and added Sandhya Mandap, an ornamental stone temple pavilion submerged partially in water.",
+      architecture: "Features stone ghat steps, the partially submerged Sandhya Mandap with monolithic carved pillars, the lakeside backdrop of the black-stone Shalini Palace, and a modern paved 2.5-km walking promenade with Victorian-style lamp posts and gazebos.",
+      bestTimeToVisit: "Year-round; Evening hours (04:30 PM - 09:00 PM) for sunset and breezy weather",
+      suggestedDuration: "1.5 - 2.5 Hours",
+      openingHours: "Open 24 Hours (Promenade); Boating: 09:00 AM - 07:00 PM",
+      isOpeningHoursVerified: true,
+      entryFee: "Free Promenade Access; Pedal boating: ₹60 - ₹120 per boat",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Hari Om Nagar, Rankala Lake Promenade, Kolhapur, Maharashtra 416010",
+        lat: 16.6874,
+        lng: 74.2141
+      },
+      howToReach: {
+        air: "Kolhapur Airport (KLH) is 11 km.",
+        rail: "Kolhapur Railway Station is 3.5 km.",
+        road: "Located in the heart of western Kolhapur; 10 minutes by auto-rickshaw from Mahalaxmi Temple."
+      },
+      travelTips: [
+        "Do not miss the evening Kolhapuri Bhel, Kanda Bhaji, and freshly roasted sweet corn at Rankala Chowpatty.",
+        "Take a pedal or motor boat ride to view the Sandhya Mandap and Shalini Palace reflections.",
+        "Early morning joggers can witness peaceful birdwatching along the lotus patches."
+      ],
+      nearbyAttractions: [
+        "Mahalakshmi Temple (2.2 km)",
+        "Shalini Palace (500m)",
+        "New Palace Museum (4.5 km)"
+      ],
+      featured: true,
+      rating: 4.7,
+      reviewCount: 1680
+    },
+    {
+      id: "kalammawadi-dam",
+      name: "Kalammawadi Dam (Dudhaganga Sagar)",
+      marathiName: "काळम्मावाडी धरण (दूधगंगा सागर)",
+      category: "nature",
+      tag: "Hydro Wonder & Green Hills",
+      distanceKm: 55.0,
+      image: "/images/activity-1.jpg",
+      gallery: [
+        "/images/activity-1.jpg",
+        "/images/Kalamwadi Damm.png"
+      ],
+      shortDescription: "A monumental 73-meter high gravity dam on the Dudhaganga River with 28 TMC water storage, surrounded by the emerald folds of the Western Ghats.",
+      overview: "Kalammawadi Dam (named Dudhaganga Sagar) is the largest dam in Kolhapur district. Built across the pristine Dudhaganga River near Radhanagari, it serves as a joint project between Maharashtra and Karnataka, providing irrigation, clean drinking water, and hydroelectric power while serving as a peaceful ecotourism getaway.",
+      history: "Construction commenced in 1983 under the Government of Maharashtra and was inaugurated by Prime Minister Indira Gandhi, reaching completion in 1999. It stands as a testament to engineering excellence, transforming agricultural productivity in the region.",
+      architecture: "A solid concrete and rubble-gravity dam standing 73.08 meters (240 feet) tall and stretching 1,280 meters (4,200 feet) in length. Its vast reservoir covers undulating Sahyadri valleys, flanked by dense semi-evergreen forests and bird habitats.",
+      bestTimeToVisit: "August to January (Post-monsoon full reservoir capacity and lush green hills)",
+      suggestedDuration: "2 - 3 Hours",
+      openingHours: "09:00 AM - 05:30 PM (Subject to irrigation department access regulations)",
+      isOpeningHoursVerified: true,
+      entryFee: "Free Entry; Visitor passes required at security checkpoint",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Kalammawadi, Radhanagari Taluka, Kolhapur District, Maharashtra 416212",
+        lat: 16.3262,
+        lng: 74.0157
+      },
+      howToReach: {
+        air: "Kolhapur Airport is 60 km away.",
+        rail: "Kolhapur Railway Station is 55 km away.",
+        road: "Accessible via Kolhapur-Radhanagari road (1.5 hours scenic drive through sugarcane valleys and forest fringes)."
+      },
+      travelTips: [
+        "Carry light snacks and drinking water; commercial stalls are limited near the dam wall.",
+        "Check security permissions for walking along the dam crest with the irrigation staff.",
+        "Combine with a wildlife safari in Radhanagari Bison Sanctuary."
+      ],
+      nearbyAttractions: [
+        "Radhanagari Wildlife Sanctuary (18 km)",
+        "Dajipur Bison Sanctuary (32 km)",
+        "Rautwadi Waterfalls (24 km)"
+      ],
+      featured: false,
+      rating: 4.6,
+      reviewCount: 380
+    },
+    {
+      id: "new-palace",
+      name: "New Palace & Chhatrapati Shahu Maharaj Museum",
+      marathiName: "नवीन राजवाडा व छत्रपती शाहू महाराज संग्रहालय",
+      category: "historical",
+      tag: "Royal Maratha Heritage",
+      distanceKm: 3.5,
+      image: "/images/Shivaji-University-Kolhapur.jpg",
+      gallery: [
+        "/images/Shivaji-University-Kolhapur.jpg",
+        "/images/hero.jpg"
+      ],
+      shortDescription: "Magnificent 1884 black-stone palace designed in Indo-Saracenic style by Major Mant, housing the royal family residence and an invaluable royal museum.",
+      overview: "Constructed between 1877 and 1884, the New Palace of Kolhapur is a masterpiece of Victorian Indo-Saracenic royal architecture. Built in polished black basalt, it still serves as the residence of the direct descendants of Chhatrapati Shivaji Maharaj (the Kolhapur royal family), with the ground floor dedicated to the world-renowned Chhatrapati Shahu Museum.",
+      history: "Commissioned under British architect Major Charles Mant during the reign of Maharaja Shivaji IV and nurtured by Rajarshi Chhatrapati Shahu Maharaj. Shahu Maharaj led revolutionary social reforms, free education for all castes, and patronized arts, music, and wrestling from this administrative palace.",
+      architecture: "Features eight-angled central clock towers, Italian marble staircases, stained glass windows depicting Shivaji Maharaj's life, and a grand Durbar Hall with carved teak ceilings. The museum displays royal weaponry, silver carriages, gold-embroidered palanquins, historical treaties, and hunting trophies.",
+      bestTimeToVisit: "October to March",
+      suggestedDuration: "2 - 3 Hours",
+      openingHours: "09:30 AM - 05:30 PM (Closed on Mondays)",
+      isOpeningHoursVerified: true,
+      entryFee: "₹50 for Adults, ₹25 for Children (Verified Museum Ticket)",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Bhavani Mandap Road / New Palace, Raman Mala, Kolhapur, Maharashtra 416003",
+        lat: 16.7176,
+        lng: 74.2285
+      },
+      howToReach: {
+        air: "Kolhapur Airport is 9 km.",
+        rail: "Kolhapur Station is 2.5 km.",
+        road: "Located centrally on the New Palace road; easily reachable by auto or city bus."
+      },
+      travelTips: [
+        "Museum remains closed on Mondays, plan your trip accordingly.",
+        "Spend time exploring the deer park and tranquil lake within the royal palace grounds.",
+        "Photography inside the Durbar Hall museum is restricted."
+      ],
+      nearbyAttractions: [
+        "Town Hall Museum (2 km)",
+        "Bhavani Mandap (3 km)",
+        "Mahalakshmi Temple (3.5 km)"
+      ],
+      featured: true,
+      rating: 4.8,
+      reviewCount: 910
+    },
+    {
+      id: "radhanagari-wildlife",
+      name: "Radhanagari & Dajipur Wildlife Sanctuary",
+      marathiName: "राधानगरी व दाजीपूर वन्यजीव अभयारण्य",
+      category: "nature",
+      tag: "Indian Bison Sanctuary",
+      distanceKm: 58.0,
+      image: "/images/activity-1.jpg",
+      gallery: [
+        "/images/activity-1.jpg",
+        "/images/Kalamwadi Damm.png"
+      ],
+      shortDescription: "A UNESCO World Heritage natural site in the Sahyadris, renowned as the sanctuary for the majestic Indian Bison (Gaur), leopards, and exotic Western Ghats birds.",
+      overview: "Radhanagari Wildlife Sanctuary is the oldest protected sanctuary in Maharashtra, nestled between the catchments of the Bhogavati and Dudhaganga rivers. Spanning 351 sq km of dense evergreen forests, it is famous as the primary sanctuary for the Indian Bison (Gaur). It is also home to leopards, barking deer, mouse deer, the Malabar giant squirrel, and rare hornbills.",
+      history: "Originally established as a game sanctuary by Rajarshi Shahu Maharaj in the early 20th century to protect wildlife habitats, it was officially declared a wildlife sanctuary by the Government of Maharashtra in 1958 and gained UNESCO Western Ghats world natural heritage status.",
+      architecture: "Pristine nature trails, watchtowers at Dajipur and Waghache Pani (Tiger Waterhole), and rich laterite plateau ecosystems (Sadas) that burst into wild seasonal wildflower carpets post-monsoon.",
+      bestTimeToVisit: "October to May (Best for wildlife sightings around watering holes)",
+      suggestedDuration: "Full Day excursion",
+      openingHours: "Safari timings: 06:00 AM - 10:00 AM and 03:00 PM - 06:00 PM",
+      isOpeningHoursVerified: true,
+      entryFee: "Forest permit: ₹50 per person; Vehicle safari fee: ₹150 - ₹400",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Radhanagari & Dajipur, Kolhapur District, Maharashtra 416215",
+        lat: 16.4167,
+        lng: 73.9833
+      },
+      howToReach: {
+        air: "Kolhapur Airport is 65 km.",
+        rail: "Kolhapur Station is 58 km.",
+        road: "Connected by Kolhapur-Radhanagari-Dajipur highway; private cabs and safari jeeps available from Kolhapur."
+      },
+      travelTips: [
+        "Book a registered forest department open-jeep safari for the best chance to spot Gaurs in the wild.",
+        "Wear earthy-colored clothes (green, brown, khaki) and maintain silence inside the reserve.",
+        "Carry binoculars and a zoom lens for birdwatching."
+      ],
+      nearbyAttractions: [
+        "Kalammawadi Dam (20 km)",
+        "Rautwadi Falls (25 km)",
+        "Gaganbawda (40 km)"
+      ],
+      featured: true,
+      rating: 4.7,
+      reviewCount: 520
+    },
+    {
+      id: "bhavani-mandap",
+      name: "Bhavani Mandap & Maratha Heritage Hall",
+      marathiName: "भवानी मंडप",
+      category: "historical",
+      tag: "Historic Seat of Power",
+      distanceKm: 2.2,
+      image: "/images/hero.jpg",
+      gallery: [
+        "/images/hero.jpg",
+        "/images/destination-1.jpg"
+      ],
+      shortDescription: "Historic 14-courtyard royal palace complex adjacent to Mahalakshmi Temple, displaying royal weaponry, lifelike statue of Shahu Maharaj, and ancient throne.",
+      overview: "Bhavani Mandap was the historic palace and political headquarters of the Kolhapur state during the Maratha Empire. Situated right next to the Mahalakshmi Temple, it once comprised 14 interconnected courtyards, barracks, stables, and wrestling rings.",
+      history: "Built during the reign of the Kolhapur Chhatrapatis, the palace survived British bombardment in 1844. Rajarshi Chhatrapati Shahu Maharaj carried out governance and patronized cultural arts and wrestling bouts from this historic precinct.",
+      architecture: "Traditional Maratha stone and wooden architecture, housing a temple dedicated to Goddess Tulja Bhavani, the life-size statue of Chhatrapati Shahu Maharaj, stuffed wild animals, antique Maratha swords, armor, and the ceremonial royal bullock cart.",
+      bestTimeToVisit: "Year-round",
+      suggestedDuration: "1 Hour",
+      openingHours: "09:00 AM - 07:00 PM (Daily)",
+      isOpeningHoursVerified: true,
+      entryFee: "Free Entry",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Bhavani Mandap, C Ward, Kolhapur, Maharashtra 416012",
+        lat: 16.6953,
+        lng: 74.2248
+      },
+      howToReach: {
+        air: "Kolhapur Airport is 10 km.",
+        rail: "Kolhapur Railway Station is 2.5 km.",
+        road: "Walking distance (300 meters) from Shri Mahalakshmi Temple."
+      },
+      travelTips: [
+        "Easily combined with Mahalakshmi Temple visit.",
+        "Shop for authentic Kolhapuri Chappals from genuine artisan shops right outside Bhavani Mandap.",
+        "Try the famous Phadtare Misal or traditional Rabdi nearby."
+      ],
+      nearbyAttractions: [
+        "Mahalakshmi Temple (300m)",
+        "Rankala Lake (2.5 km)"
+      ],
+      featured: false,
+      rating: 4.6,
+      reviewCount: 430
+    },
+    {
+      id: "narsobawadi",
+      name: "Narsobawadi (Narasimhawaadi Datta Kshetra)",
+      marathiName: "नृसिंहवाडी दत्त क्षेत्र",
+      category: "temple",
+      tag: "Sacred River Confluence",
+      distanceKm: 48.0,
+      image: "/images/destination-3.jpg",
+      gallery: [
+        "/images/destination-3.jpg",
+        "/images/hero.jpg"
+      ],
+      shortDescription: "Sacred pilgrimage center at the confluence of the holy Krishna and Panchaganga rivers, consecrated to Shri Narasimha Saraswati Swami Maharaj.",
+      overview: "Narsobawadi is revered across Maharashtra and Karnataka as the divine capital of Lord Dattatreya devotees. Consecrated to Shri Narasimha Saraswati Maharaj (the second avatar of Lord Dattatreya), who resided and mediated here for 12 years under an Audumbar tree.",
+      history: "Dates back to the 14th century, sanctified by the Guru Charitra. The shrine possesses padukas (sacred footprints) worshipped continuously with Vedic rituals and river aarti.",
+      architecture: "A scenic stone riverfront temple with stone ghats dipping into the holy confluence of the Krishna and Panchaganga rivers. Devotees perform pradakshina barefoot around the Audumbar tree.",
+      bestTimeToVisit: "October to March; Dattatreya Jayanti (December)",
+      suggestedDuration: "2 - 3 Hours",
+      openingHours: "05:00 AM - 10:00 PM (Daily)",
+      isOpeningHoursVerified: true,
+      entryFee: "Free Entry",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Narsobawadi, Shirol Taluka, Kolhapur District, Maharashtra 416104",
+        lat: 16.6914,
+        lng: 74.5979
+      },
+      howToReach: {
+        air: "Kolhapur Airport is 50 km.",
+        rail: "Jaysingpur Station is 16 km; Miraj Junction is 25 km.",
+        road: "State highway from Kolhapur via Jaysingpur (1 hour drive)."
+      },
+      travelTips: [
+        "Do not leave without tasting the authentic Basundi and Kavathekar Peda famous at Narsobawadi.",
+        "Boat rides on the Krishna river confluence are available during morning hours.",
+        "Modest attire required for temple parikrama."
+      ],
+      nearbyAttractions: [
+        "Kopeshwar Temple Khidrapur (22 km)",
+        "Bahubali Hill Kumbhoj (30 km)"
+      ],
+      featured: false,
+      rating: 4.8,
+      reviewCount: 650
+    },
+    {
+      id: "gaganbawda",
+      name: "Gaganbawda Hill Station & Fort Gagangad",
+      marathiName: "गगनबावडा व गगनगड",
+      category: "nature",
+      tag: "Mist-Clad Sahyadri Pass",
+      distanceKm: 55.0,
+      image: "/images/activity-2.jpg",
+      gallery: [
+        "/images/activity-2.jpg",
+        "/images/activity-1.jpg"
+      ],
+      shortDescription: "A serene, unspoilt hill station on the crest of the Sahyadris, famous for the mist-covered Karul & Bhuibawda ghats, Gagangad Fort, and ashram of Gagangiri Maharaj.",
+      overview: "Located 55 km from Kolhapur at an elevation of 2,800 feet, Gaganbawda is where the Deccan plateau plunges dramatically into the coastal Konkan region through two thrilling passes: Karul Ghat and Bhuibawda Ghat. A haven for nature lovers and monsoons.",
+      history: "Home to the historic Gagangad Fort built by Raja Bhoja II and the cave retreat where renowned saint Gagangiri Maharaj meditated for decades.",
+      architecture: "Untouched mountain ridges, ancient natural caves, deep valley drop-offs, and stone ghat roads engineered through dense rainforests.",
+      bestTimeToVisit: "June to October (Monsoon clouds and cascading waterfalls); November to February (Crisp mountain air)",
+      suggestedDuration: "Half Day to Full Day",
+      openingHours: "Open 24 Hours",
+      isOpeningHoursVerified: true,
+      entryFee: "Free",
+      isEntryFeeVerified: true,
+      location: {
+        address: "Gaganbawda Taluka, Kolhapur District, Maharashtra 416206",
+        lat: 16.5456,
+        lng: 73.8294
+      },
+      howToReach: {
+        air: "Kolhapur Airport is 60 km.",
+        rail: "Kolhapur Railway Station is 55 km.",
+        road: "Direct state highway from Kolhapur (1.5 hours drive through sugarcane landscapes and ghat turns)."
+      },
+      travelTips: [
+        "Experience the Karul Ghat viewpoint for a breathtaking panorama of the Konkan plain stretching to the Arabian Sea.",
+        "Monsoon driving requires caution due to thick clouds and sudden rain showers.",
+        "Carry a windcheater or light jacket year-round."
+      ],
+      nearbyAttractions: [
+        "Morjai Plateau (12 km)",
+        "Radhanagari Sanctuary (40 km)"
+      ],
+      featured: false,
+      rating: 4.7,
+      reviewCount: 310
+    }
+  ],
+
+  hotels: [
+    {
+      id: "sayaji-kolhapur",
+      name: "Sayaji Hotel Kolhapur",
+      type: "Luxury",
+      stars: 5,
+      location: "Kawala Naka, Old Pune-Bangalore Highway",
+      distanceStation: "2.5 km from Kolhapur Railway Station",
+      image: "/images/Sayaji.jpg",
+      gallery: [
+        "/images/Sayaji.jpg",
+        "/images/hotel-3.jpg",
+        "/images/radiant-hotel.jpg"
+      ],
+      description: "Kolhapur's premier 5-star luxury address, offering world-class hospitality, opulent guest rooms, rooftop fine-dining, and signature 'Yours Truly' service.",
+      ambiance: "Sayaji Kolhapur boasts polished rooms and suites, sophisticated contemporary interiors, and an expansive grand marble lobby. The architecture reflects a modern royal touch, combining world-class elegance with subtle Maratha artistic accents. Vibrant dining venues and a rooftop lounge cater to both discerning leisure travelers and corporate executives.",
+      famousFor: [
+        "Signature 'Yours Truly' personalized hospitality and round-the-clock butler support",
+        "Celebrated on-site dining including Blue Lotus (multi-cuisine buffet), Moon Tree Café, and Barbeque Nation",
+        "State-of-the-art wellness club, outdoor swimming pool, and high-tech banquet halls",
+        "Strategic central location right beside DYP City Mall and highway entry"
+      ],
+      amenities: [
+        "Free High-Speed Wi-Fi",
+        "Swimming Pool",
+        "Fitness Center / Gym",
+        "Multiple Restaurants & Rooftop Bar",
+        "24-Hour Room Service",
+        "Free Valet Parking",
+        "Airport / Station Transfers",
+        "Spa & Wellness Center"
+      ],
+      priceRange: "₹4,800 - ₹9,500 / night",
+      contact: {
+        phone: "+91 231 2533444",
+        email: "reservations.kop@sayajihotels.com",
+        website: "https://sayajihotels.com",
+        address: "Old Pune-Bangalore Highway, Kawala Naka, Kolhapur, Maharashtra 416005"
+      },
+      coordinates: { lat: 16.7032, lng: 74.2486 },
+      rating: 4.8,
+      verified: true,
+      rooms: [
+        { type: "Executive Deluxe Room", capacity: "2 Adults, 1 Child", price: 4800, description: "Spacious 340 sq ft room with king bed, walk-in shower, city view, and high-speed Wi-Fi." },
+        { type: "Grand Club Room", capacity: "2 Adults, 1 Child", price: 6200, description: "Premium room with club lounge access, complimentary breakfast, and luxury toiletries." },
+        { type: "Presidential Royal Suite", capacity: "3 Adults or 2 Adults + 2 Children", price: 9500, description: "Opulent master suite with separate living room, dining area, jacuzzi bath, and panoramic city skyline views." }
+      ]
+    },
+    {
+      id: "hotel-radiant",
+      name: "Hotel Radiant Kolhapur",
+      type: "Mid-Range",
+      stars: 3,
+      location: "Near Railway Station, New Shahupuri",
+      distanceStation: "400 meters from Kolhapur Railway Station",
+      image: "/images/hotel-radiant.jpg",
+      gallery: [
+        "/images/hotel-radiant.jpg",
+        "/images/radiant-hotel.jpg",
+        "/images/hotel-2.jpg"
+      ],
+      description: "A comfortable, highly praised 3-star property in the commercial hub of New Shahupuri, celebrated for authentic dining, city-view rooms, and friendly hospitality.",
+      ambiance: "Warmly decorated and cozy, Hotel Radiant offers a welcoming urban environment for families and business visitors. With freshly styled guest rooms featuring modern amenities and large windows overlooking the cityscape, guests enjoy a relaxing stay with prompt service.",
+      famousFor: [
+        "Exceptional proximity to Kolhapur Railway Station (walkable in 5 mins)",
+        "Highly praised in-house restaurant serving authentic Kolhapuri thalis alongside North Indian and Chinese delicacies",
+        "Full conference and banquet facilities for social gatherings and meetings",
+        "Dependable family-friendly service and multi-floor secure parking"
+      ],
+      amenities: [
+        "Free Wi-Fi",
+        "Multi-cuisine Restaurant",
+        "Air Conditioned Rooms",
+        "24-Hour Front Desk",
+        "Elevator & Multi-floor Parking",
+        "Room Service",
+        "Travel Desk & Sightseeing Assistance"
+      ],
+      priceRange: "₹2,200 - ₹3,800 / night",
+      contact: {
+        phone: "+91 231 2654321",
+        email: "info@hotelradiantkolhapur.com",
+        address: "Station Road, New Shahupuri, Kolhapur, Maharashtra 416001"
+      },
+      coordinates: { lat: 16.7025, lng: 74.2372 },
+      rating: 4.4,
+      verified: true,
+      rooms: [
+        { type: "Standard AC Room", capacity: "2 Adults", price: 2200, description: "Comfortable air-conditioned room with queen bed, LED TV, and attached bathroom." },
+        { type: "Deluxe Family Room", capacity: "3 Adults or 2 Adults + 2 Children", price: 3100, description: "Spacious family room with twin queen beds and seating corner." },
+        { type: "Executive Suite", capacity: "2 Adults", price: 3800, description: "Modern suite featuring work desk, sofa lounge, mini-refrigerator, and city view." }
+      ]
+    },
+    {
+      id: "hotel-grand-indu",
+      name: "Hotel Grand Indu (Highway Junction)",
+      type: "Budget & Transit",
+      stars: 3,
+      location: "Near NH-48 Mumbai-Bangalore Highway, Shiroli MIDC",
+      distanceStation: "7.0 km from Railway Station / Direct Highway Access",
+      image: "/images/3-star-hotel.jpg",
+      gallery: [
+        "/images/3-star-hotel.jpg",
+        "/images/hotel-1.jpg"
+      ],
+      description: "Recognized in the original project as 'Hotel 3 Star', Hotel Grand Indu offers clean, reliable transit accommodation directly accessible from the Mumbai-Bangalore highway.",
+      ambiance: "Designed with modern comfort and functional elegance, the property is surrounded by open green farmland and hills while sitting right on the highway bypass. It is especially cherished by long-distance road trippers seeking a quick, clean, and restful stopover without navigating inner-city traffic.",
+      famousFor: [
+        "Strategic location right on NH-48 Mumbai-Bangalore Highway",
+        "Spotless interiors, hygienic sanitized bathrooms, and well-kept garden courtyard",
+        "Convenient access to Shiroli MIDC industrial belt for business professionals",
+        "Ample coach and private car parking with 24-hour security"
+      ],
+      amenities: [
+        "Free High-Speed Wi-Fi",
+        "On-site Pure Veg / Multi-cuisine Restaurant",
+        "24-Hour Check-in",
+        "Ample Highway Parking",
+        "Power Backup",
+        "Hot Water 24/7",
+        "Breakfast Available"
+      ],
+      priceRange: "₹1,600 - ₹2,900 / night",
+      contact: {
+        phone: "+91 231 2468135",
+        email: "reservations@hotelgrandindu.com",
+        address: "NH-48 Highway Junction, Near Shiroli MIDC, Kolhapur, Maharashtra 416122"
+      },
+      coordinates: { lat: 16.7451, lng: 74.2694 },
+      rating: 4.2,
+      verified: true,
+      rooms: [
+        { type: "Comfort AC Room", capacity: "2 Adults", price: 1600, description: "Spick-and-span room with double bed, clean linen, hot shower, and work desk." },
+        { type: "Superior Highway View Room", capacity: "2 Adults, 1 Child", price: 2100, description: "Soundproof room with scenic mountain backdrop view and complimentary breakfast." },
+        { type: "Family Quad Room", capacity: "4 Adults", price: 2900, description: "Four-bed accommodation ideal for road-trip families and pilgrim groups." }
+      ]
+    },
+    {
+      id: "the-fern-samali",
+      name: "The Fern Samali Resort & Spa",
+      type: "Luxury",
+      stars: 4,
+      location: "Near Panhala Fort Gateway",
+      distanceStation: "18 km from City Center / Panhala Hills",
+      image: "/images/hotel-2.jpg",
+      gallery: [
+        "/images/hotel-2.jpg",
+        "/images/Panahala Fort.webp"
+      ],
+      description: "An eco-friendly luxury hill retreat offering panoramic Sahyadri views, cottage stays, Ayurvedic spa treatments, and serene garden surroundings.",
+      ambiance: "Surrounded by lush Sahyadri woods on the approaches to Panhala Fort, the resort offers an eco-sensitive sanctuary. Features exposed basalt architecture, manicured lawns, infinity views of the mist-laden valleys, and open-air dining.",
+      famousFor: [
+        "Breathtaking sunset views overlooking the valley",
+        "Authentic Maharashtrian village breakfast and herbal teas",
+        "Ayurvedic massage center and meditation pavilion",
+        "Short 10-minute drive to historical Panhala Fort"
+      ],
+      amenities: [
+        "Swimming Pool",
+        "Ayurvedic Spa",
+        "Organic Restaurant",
+        "Cottages with Balcony",
+        "Children's Play Area",
+        "Nature Walk Trails",
+        "Free Wi-Fi"
+      ],
+      priceRange: "₹3,900 - ₹7,200 / night",
+      contact: {
+        phone: "+91 231 2689900",
+        email: "stay@fernsamalikolhapur.com",
+        address: "Panhala Foothills Road, Kolhapur District, Maharashtra 416201"
+      },
+      coordinates: { lat: 16.8012, lng: 74.1221 },
+      rating: 4.6,
+      verified: true,
+      rooms: [
+        { type: "Deluxe Valley Cottage", capacity: "2 Adults", price: 3900, description: "Standalone cottage with private sit-out overlooking the green Sahyadri hills." },
+        { type: "Premium Suite with Jacuzzi", capacity: "2 Adults, 1 Child", price: 7200, description: "Luxurious wooden suite featuring a private jacuzzi bathtub and panoramic sunrise view." }
+      ]
+    }
+  ],
+
+  foodItems: [
+    {
+      id: "kolhapuri-misal",
+      name: "Kolhapuri Misal",
+      marathiName: "कोल्हापुरी मिसळ",
+      category: "Snacks & Delicacies",
+      spiceLevel: "Fiery & Aromatic (Customizable)",
+      veg: true,
+      image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600",
+      description: "Kolhapur's crowning culinary jewel. A fiery sprout curry infused with traditional 'Kolhapuri Kanda-Lahsun Masala', topped with crisp farsan, finely chopped red onions, fresh coriander, and a squeeze of lime, served with soft butter pav and soothing spiced curd or solkadhi.",
+      famousPlaces: [
+        { name: "Phadtare Misal", location: "Udyam Nagar", tip: "Try their special Kat with mild or spicy option, famous since 1956." },
+        { name: "Bawada Misal", location: "Kasaba Bawada", tip: "Traditional rustic preparation cooked over slow charcoal flame." },
+        { name: "Aahar Misal", location: "Mangalwar Peth", tip: "Historic spot known for authentic thin fiery gravy." }
+      ]
+    },
+    {
+      id: "tambda-rassa",
+      name: "Tambda Rassa (Red Curry)",
+      marathiName: "तांबडा रस्सा",
+      category: "Royal Non-Veg Broth",
+      spiceLevel: "Hot & Rich",
+      veg: false,
+      image: "https://images.unsplash.com/photo-1546833999-b9f581a1996d?w=600",
+      description: "A world-famous deep red broth simmered with mutton bone stock, dry roasted coconut, sesame, poppy seeds, and stone-ground Kolhapuri Lavangi chillies. Spicy, robust, and aromatic, it is savored as a warming soup or poured over hot rice.",
+      famousPlaces: [
+        { name: "Hotel Opal", location: "Old Pune-Bangalore Road", tip: "Legendary royal family recipes served with hot bhakri." },
+        { name: "Dehaati", location: "NH-4 Bypass, Shiroli", tip: "Authentic rustic thali awarded nationally for culinary heritage." },
+        { name: "Padma Guest House", location: "Rajarampuri", tip: "Established in 1947, favored by Kolhapuri cinema royalty." }
+      ]
+    },
+    {
+      id: "pandhra-rassa",
+      name: "Pandhra Rassa (White Broth)",
+      marathiName: "पांढरा रस्सा",
+      category: "Royal Non-Veg Broth",
+      spiceLevel: "Mild, Soothing & Nutty",
+      veg: false,
+      image: "https://images.unsplash.com/photo-1604382354936-07c5d9983bd3?w=600",
+      description: "The soothing yin to Tambda Rassa's yang. Made from reduced goat bone broth enriched with thick coconut milk, cashew nut paste, white sesame, whole cardamom, and cinnamon. Velvety, delicately spiced, and incredibly comforting.",
+      famousPlaces: [
+        { name: "Hotel Opal", location: "Tarabai Park", tip: "Drink it hot in a bowl before beginning your main course." },
+        { name: "Hotel Parakh", location: "Shahupuri", tip: "Signature homestyle white rassa cooked with fresh local spices." }
+      ]
+    },
+    {
+      id: "kolhapuri-thali",
+      name: "Traditional Kolhapuri Mutton & Chicken Thali",
+      marathiName: "कोल्हापुरी मटण/चिकन थाळी",
+      category: "Full Feast",
+      spiceLevel: "Full-bodied",
+      veg: false,
+      image: "https://images.unsplash.com/photo-1589301760014-d929f3979dbc?w=600",
+      description: "The complete royal Maratha dining experience. Includes tender mutton sukkha (dry fry), unlimited Tambda Rassa, unlimited Pandhra Rassa, piping hot Jowar or Bajra Bhakri (unleavened flatbread), fragrant Indrayani rice, sliced onions, and fresh lemon wedges.",
+      famousPlaces: [
+        { name: "Dehaati", location: "Shiroli Bypass", tip: "Voted among top 50 restaurants in India; book a table on weekends." },
+        { name: "Hotel Pearl", location: "Station Road", tip: "Fine dining ambiance with authentic spice balance." }
+      ]
+    },
+    {
+      id: "kanda-bhaji-rankala",
+      name: "Rankala Kanda Bhaji & Bhel",
+      marathiName: "रंकाळा कांदा भजी व भेळ",
+      category: "Lakeside Street Food",
+      spiceLevel: "Medium Crispy",
+      veg: true,
+      image: "https://images.unsplash.com/photo-1601050690597-df0568f70950?w=600",
+      description: "Golden, intensely crunchy onion fritters made with gram flour, sliced onions, carom seeds (ajwain), and green chillies, served piping hot lakeside at Rankala Chowpatty along with spicy Kolhapuri bhel.",
+      famousPlaces: [
+        { name: "Rankala Chowpatty Stalls", location: "Rankala Lake Promenade", tip: "Pair with hot ginger cutting chai during evening sunset." }
+      ]
+    },
+    {
+      id: "kolhapuri-gul-pedhe",
+      name: "Authentic Kolhapuri Jaggery (Gul) & Pedhe",
+      marathiName: "कोल्हापुरी सेंद्रिय गूळ आणि पेढे",
+      category: "Sweet Treats",
+      spiceLevel: "Pure Sweet",
+      veg: true,
+      image: "https://images.unsplash.com/photo-1599488615731-7e5c2823ff28?w=600",
+      description: "Kolhapur is India's jaggery capital, cultivating sweet, nutrient-dense sugarcane. Authentic organic yellow jaggery cubes and milk pedhes made from fresh buffalo mawa are the traditional gift souvenirs visitors take home.",
+      famousPlaces: [
+        { name: "Shahupuri Gur Market", location: "Shahupuri", tip: "Asia's largest regulated jaggery market; purchase export grade gul blocks." },
+        { name: "Ghungurwar Pedhewale", location: "Bhausingji Road", tip: "Centuries-old sweetmaker near Mahalaxmi temple." }
+      ]
+    }
+  ],
+
+  culture: [
+    {
+      id: "kolhapuri-chappal",
+      title: "Kolhapuri Chappals (GI Tagged)",
+      marathiTitle: "कोल्हापुरी चप्पल (भौगोलिक मानांकन)",
+      category: "Handicrafts & Artisans",
+      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600",
+      description: "World-renowned handcrafted leather footwear carrying the prestigious Geographical Indication (GI) tag. Tanned using natural vegetable dyes from babool bark and hand-braided with leather cords without iron nails, these sandals are famed for durability, aesthetic elegance, and authentic rustic squeak.",
+      highlights: [
+        "100% natural vegetable-tanned buffalo and goat leather",
+        "Handcrafted by generational artisan communities in Shivaji Market and Subhash Road",
+        "Therapeutic qualities known to keep feet cool during Indian summers"
+      ]
+    },
+    {
+      id: "kolhapuri-saaj",
+      title: "Kolhapuri Saaj (Royal Gold Ornament)",
+      marathiTitle: "कोल्हापुरी साज",
+      category: "Jewellery & Royal Adornment",
+      image: "https://images.unsplash.com/photo-1535632066927-ab7c9ab60908?w=600",
+      description: "A celebrated Maharashtrian necklace designed with 21 leaf-shaped lockets (panadis), each symbolising an aspect of divine power, flora, fauna, and avatars of Lord Vishnu, culminating in a central ruby-studded pendant (taviz).",
+      highlights: [
+        "Worn by royal Maratha queens and treasured as a sacred bridal heirloom",
+        "Crafted by traditional Suvarnakar goldsmiths around Gujri Market, Kolhapur",
+        "Available in authentic 22K gold as well as affordable micron gold-plated silver"
+      ]
+    },
+    {
+      id: "kushti-wrestling",
+      title: "Kushti & The Traditional Taleems (Akharas)",
+      marathiTitle: "कोल्हापुरी कुस्ती व तालीम संस्कृती",
+      category: "Sport & Tradition",
+      image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600",
+      description: "Kolhapur is reverently known as the 'Mecca of Indian Wrestling'. Nurtured personally by Rajarshi Shahu Maharaj, the city houses centuries-old mud akharas (Taleems) such as Motibaug, Gangavesh, and Shahupuri, which have produced Olympic legends including Khashaba Jadhav (India's first individual Olympic medalist in 1952) and Hind Kesari champions.",
+      highlights: [
+        "Live practice sessions at historic mud pits treated with ghee, turmeric, and red earth",
+        "Annual grand wrestling matches at the historic Khasbag Maidan (capacity 25,000)",
+        "Strict lifestyle of discipline, vegetarian high-protein diet, and sportsmanship"
+      ]
+    }
+  ],
+
+  events: [
+    {
+      id: "ambabai-navratri",
+      title: "Shri Mahalakshmi Navratri Mahotsav & Rathotsav",
+      marathiTitle: "श्री अंबाबाई नवरात्र महोत्सव व रथोत्सव",
+      dateDescription: "Ashwin Month (September - October)",
+      month: "October",
+      location: "Mahalakshmi Temple Complex & City Gates",
+      description: "A 10-day grand festival attracting over 2 million pilgrims. Goddess Mahalakshmi is adorned daily in unique mythological avatars (pooja alankars). The festival culminates on Ashwin Poornima with the grand silver Rathotsav chariot procession circling the historic royal streets illuminated with festive lamps.",
+      highlights: [
+        "Traditional 21-gun salute by the Kolhapur police band",
+        "Spectacular floral decorations across the Hemadpanthi temple sanctum",
+        "Midnight royal chariot procession attended by thousands of singing devotees"
+      ],
+      isAnnual: true,
+      verifiedStatus: "Annual Confirmed Cultural Calendar"
+    },
+    {
+      id: "jyotiba-chaitra-yatra",
+      title: "Jyotiba Chaitra Poornima Yatra (Gulal Festival)",
+      marathiTitle: "जोतिबा चैत्र पौर्णिमा महायात्रा",
+      dateDescription: "Chaitra Poornima (March - April)",
+      month: "April",
+      location: "Wadi Ratnagiri Hill, Panhala",
+      description: "One of western India's largest pilgrimage spectacles. Over 800,000 devotees climb the hill with towering 50-foot ornamental poles called 'Sasan Kathis', showering pink herbal gulal until the entire mountain peak, temples, and skies are draped in vivid magenta pink.",
+      highlights: [
+        "Arrival of hundreds of royal Sasan Kathis from across Maharashtra and Karnataka",
+        "Resonating chants of 'Changbhala' with traditional Halgi drums and tutaris",
+        "Unique cultural experience celebrating victory of good over evil"
+      ],
+      isAnnual: true,
+      verifiedStatus: "Annual Confirmed Cultural Calendar"
+    },
+    {
+      id: "rankala-mahotsav",
+      title: "Kolhapur Tourism & Rankala Mahotsav",
+      marathiTitle: "कोल्हापूर पर्यटन व रंकाळा महोत्सव",
+      dateDescription: "Winter Edition (December - January)",
+      month: "December",
+      location: "Rankala Lake Promenade & New Palace Grounds",
+      description: "An official cultural extravaganza organized by Maharashtra Tourism (MTDC) and Kolhapur Municipal Corporation, featuring classical musical concerts, folk Lavani performances, boat races, food festivals, and artisanal craft bazaars.",
+      highlights: [
+        "Musical water fountain shows on Rankala Lake",
+        "Authentic Kolhapuri Food Pavilion with master chefs from across the district",
+        "Heritage photo exhibitions and youth adventure sports"
+      ],
+      isAnnual: true,
+      verifiedStatus: "Confirmed Annual District Event"
+    },
+    {
+      id: "tripuri-poornima-deepotsav",
+      title: "Tripuri Poornima Deepotsav at Panchaganga Ghat",
+      marathiTitle: "त्रिपुरी पौर्णिमा दीपोत्सव",
+      dateDescription: "Kartik Poornima (November)",
+      month: "November",
+      location: "Panchaganga River Ghats & Kopeshwar Temple",
+      description: "Thousands of earthen diyas (oil lamps) are lit simultaneously along the stone steps of the holy Panchaganga Ghat and inside the open-sky Swarga Mandapa of Kopeshwar Temple, creating a magical sea of golden reflections on the holy water.",
+      highlights: [
+        "Traditional deepamala illumination ceremonies",
+        "Classical Shehnai and devotional bhajan performances by the river",
+        "Eco-friendly floating lamps released into the river stream"
+      ],
+      isAnnual: true,
+      verifiedStatus: "Confirmed Cultural Festival"
+    }
+  ],
+
+  bookings: [
+    {
+      id: "KOL-2026-4019",
+      userId: "usr_demo_02",
+      customer: {
+        name: "Rohit Shinde",
+        email: "traveler@kolhapur.com",
+        phone: "+91 9876543210",
+        city: "Pune"
+      },
+      type: "hotel",
+      destinationOrHotel: "Sayaji Hotel Kolhapur",
+      travelDate: "2026-11-20",
+      checkOutDate: "2026-11-22",
+      travellers: { adults: 2, children: 1 },
+      accommodationPreference: "Grand Club Room",
+      estimatedPrice: 12400,
+      specialRequests: "High floor room preferred, early check-in at 11 AM if available.",
+      status: "Confirmed",
+      createdAt: "2026-11-05T10:30:00.000Z"
+    },
+    {
+      id: "KOL-2026-8812",
+      userId: "guest",
+      customer: {
+        name: "Sunita Kulkarni",
+        email: "sunita.kulkarni@gmail.com",
+        phone: "+91 9422012345",
+        city: "Mumbai"
+      },
+      type: "destination_tour",
+      destinationOrHotel: "Shri Mahalakshmi Temple & Panhala Fort Heritage Tour",
+      travelDate: "2026-12-05",
+      checkOutDate: "2026-12-07",
+      travellers: { adults: 4, children: 0 },
+      accommodationPreference: "Standard Guided Tour Package",
+      estimatedPrice: 8500,
+      specialRequests: "Wheelchair assistance needed for senior citizen at Mahalaxmi temple.",
+      status: "Pending",
+      createdAt: "2026-11-08T14:15:00.000Z"
+    }
+  ],
+
+  reviews: [
+    {
+      id: "rev_01",
+      targetType: "destination",
+      targetId: "mahalakshmi-temple",
+      userName: "Ananya Deshmukh",
+      userEmail: "ananya.d@gmail.com",
+      rating: 5,
+      title: "Spiritual bliss and magnificent Chalukyan architecture!",
+      comment: "A truly divine experience. The energy inside the black-stone sanctum is palpable. We visited during early morning 6 AM Kakad Aarti and avoided queues. The Hemadpanthi pillars and carved ceiling are stunning.",
+      visitDate: "October 2026",
+      travelerType: "Family",
+      createdAt: "2026-10-24T12:00:00.000Z"
+    },
+    {
+      id: "rev_02",
+      targetType: "destination",
+      targetId: "panhala-fort",
+      userName: "Vikram Pawar",
+      userEmail: "vikram.pawar@outlook.com",
+      rating: 5,
+      title: "Thrilling historical fort with misty Sahyadri views!",
+      comment: "Standing at Teen Darwaza and Sajja Kothi gave goosebumps remembering the sacrifice of Baji Prabhu Deshpande and Chhatrapati Shivaji Maharaj's midnight escape. Excellent weather in winter.",
+      visitDate: "September 2026",
+      travelerType: "Friends",
+      createdAt: "2026-09-18T10:30:00.000Z"
+    },
+    {
+      id: "rev_03",
+      targetType: "hotel",
+      targetId: "sayaji-kolhapur",
+      userName: "Karan Mehta",
+      userEmail: "karan.mehta@yahoo.com",
+      rating: 5,
+      title: "Top-notch luxury and hospitality in Kolhapur",
+      comment: "Superb property! The 'Yours Truly' service is genuine and attentive. Moon Tree Café has great desserts and the breakfast spread at Blue Lotus is one of the best in Maharashtra. Very convenient highway access.",
+      visitDate: "November 2026",
+      travelerType: "Business",
+      createdAt: "2026-11-02T16:45:00.000Z"
+    }
+  ],
+
+  contactMessages: [
+    {
+      id: "msg_01",
+      name: "Prasad Kadam",
+      email: "prasad.kadam@gmail.com",
+      phone: "+91 9922334455",
+      subject: "Guide availability for Kopeshwar Temple and Narsobawadi",
+      message: "Hello, we are planning a 3-day family heritage trip to Kolhapur next month. Can you recommend authorized MTDC registered guides for Kopeshwar Temple architectural tour?",
+      status: "New",
+      createdAt: "2026-11-08T09:12:00.000Z"
+    }
+  ],
+
+  faqs: [
+    {
+      question: "What is the best time of year to visit Kolhapur?",
+      answer: "The ideal period is from October to March when temperatures range between 15°C and 28°C with pleasant sunshine, perfect for temple visits, fort treks, and exploring Rankala lake. July to September is spectacular for monsoons, lush green landscapes, and overflowing waterfalls at Panhala and Kalammawadi."
+    },
+    {
+      question: "Is there a dress code for entering Shri Mahalakshmi (Ambabai) Temple?",
+      answer: "Yes, traditional modest Indian attire is encouraged. Men are expected to wear dhotis, kurtas, or full trousers with shirts, while women wear sarees, salwar-kameez, or modest dresses. Shorts, sleeveless tops, and mini-skirts are not permitted inside the sanctum."
+    },
+    {
+      question: "How do I reach Kolhapur from major cities?",
+      answer: "By Air: Kolhapur Airport (KLH) operates daily flights connecting Mumbai, Bengaluru, and Hyderabad. By Rail: Chhatrapati Shahu Maharaj Terminus has direct express trains to Mumbai, Pune, Delhi, Bengaluru, and Tirupati. By Road: Kolhapur sits right on National Highway 48 (NH-48), with smooth 4-lane highway connectivity from Pune (4 hours), Mumbai (6.5 hours), and Goa (4.5 hours)."
+    },
+    {
+      question: "Where can I buy authentic GI-tagged Kolhapuri Chappals?",
+      answer: "Authentic handcrafted chappals are found in traditional artisan clusters around Shivaji Market, Bhausingji Road, Subhash Road, and outside Bhavani Mandap. Ensure you check for genuine vegetable-tanned leather and hand-stitched soles."
+    },
+    {
+      question: "Can Kolhapuri food be customized for people with lower spice tolerance?",
+      answer: "Yes! While Kolhapuri cuisine is renowned for its fiery aromatic spices, most traditional restaurants allow you to request 'medium spice' or 'mild Kat' for Misal, and serve mild, velvety Pandhra Rassa alongside Tambda Rassa."
+    }
+  ],
+
+  emergencyContacts: [
+    { service: "Kolhapur Police Control Room", number: "112 / +91 231 2653960", address: "Police Commissionerate, Kasaba Bawada" },
+    { service: "Chhatrapati Pramila Raje (CPR) Civil Hospital", number: "+91 231 2641011", address: "Near Bhausingji Road, Kolhapur" },
+    { service: "MTDC Tourist Information Counter", number: "+91 231 2652935", address: "Central Bus Stand (CBS) Premises, Kolhapur" },
+    { service: "Kolhapur Fire & Emergency Services", number: "101 / +91 231 2541101", address: "Bhavani Mandap Road" },
+    { service: "Tourist Police Assistance Booth", number: "+91 231 2544778", address: "Mahadwar Gate, Mahalakshmi Temple" }
+  ],
+
+  tours: [
+    {
+      id: "kolhapur-heritage-tour",
+      name: "Kolhapur Royal Heritage Tour",
+      marathiName: "कोल्हापूर ऐतिहासिक वारसा सहल",
+      duration: "2 Days / 1 Night",
+      daysCount: 2,
+      destinationsCount: 5,
+      category: "Historical Tourism",
+      tripType: "Historical Tourism",
+      priceTier: "Moderate",
+      estimatedPrice: 2499,
+      image: "/images/activity-2.jpg",
+      rating: 4.9,
+      reviewCount: 320,
+      highlights: [
+        "Panhala Fort Ramparts & Sajja Kothi",
+        "New Palace Museum & Durbar Hall",
+        "Bhavani Mandap Historic Armory",
+        "Royal Chhatris at Panchaganga",
+        "Town Hall Historical Museum"
+      ],
+      description: "Step into the heart of the Maratha Empire. Explore historic ramparts, royal museums, and weapons galleries with verified local historians."
+    },
+    {
+      id: "spiritual-kolhapur-tour",
+      name: "Spiritual Kolhapur Darshan Tour",
+      marathiName: "कोल्हापूर देवदर्शन व तीर्थक्षेत्र यात्रा",
+      duration: "2 Days / 1 Night",
+      daysCount: 2,
+      destinationsCount: 4,
+      category: "Religious Tourism",
+      tripType: "Religious Tourism",
+      priceTier: "Budget",
+      estimatedPrice: 1999,
+      image: "/images/destination-1.jpg",
+      rating: 4.9,
+      reviewCount: 450,
+      highlights: [
+        "Shri Mahalakshmi (Ambabai) Temple VIP Darshan",
+        "Jyotiba Hill Temple & Pink Gulal Walk",
+        "12th-century Kopeshwar Temple Khidrapur",
+        "Narsobawadi Sacred River Confluence"
+      ],
+      description: "A transformative spiritual journey across Maharashtra's supreme Shaktipeeth and ancient Chalukyan stone sanctuaries."
+    },
+    {
+      id: "kolhapur-nature-escape",
+      name: "Kolhapur Nature & Wildlife Escape",
+      marathiName: "निसर्ग, अभयारण्य व धरण सफर",
+      duration: "3 Days / 2 Nights",
+      daysCount: 3,
+      destinationsCount: 4,
+      category: "Nature & Adventure",
+      tripType: "Nature & Adventure",
+      priceTier: "Premium",
+      estimatedPrice: 3499,
+      image: "/images/activity-1.jpg",
+      rating: 4.8,
+      reviewCount: 210,
+      highlights: [
+        "Radhanagari & Dajipur Bison Safari",
+        "Kalammawadi Gravity Dam Panorama",
+        "Rankala Lake Sunset & Boating",
+        "Gaganbawda Mist Viewpoints"
+      ],
+      description: "Breathe in the lush Western Ghats. Spot wild Indian Gaurs, walk along dramatic dam reservoirs, and enjoy peaceful sunset lakes."
+    },
+    {
+      id: "weekend-kolhapur-explorer",
+      name: "Weekend Kolhapur Explorer",
+      marathiName: "विकेंड कोल्हापूर दर्शन",
+      duration: "2 Days / 1 Night",
+      daysCount: 2,
+      destinationsCount: 6,
+      category: "Weekend Getaway",
+      tripType: "Weekend Getaway",
+      priceTier: "Moderate",
+      estimatedPrice: 2299,
+      image: "/images/Rankala.jpg",
+      rating: 4.8,
+      reviewCount: 380,
+      highlights: [
+        "Mahalakshmi Temple Morning Darshan",
+        "Panhala Fort Afternoon Sunset",
+        "Rankala Lake Evening Promenade",
+        "Authentic Kolhapuri Misal & Thali Feast",
+        "Artisan Chappal Shopping"
+      ],
+      description: "The ideal 48-hour weekend getaway from Mumbai or Pune, packed with must-see sights, sunset viewpoints, and authentic cuisine."
+    },
+    {
+      id: "family-sightseeing-tour",
+      name: "Family Fun & Heritage Sightseeing",
+      marathiName: "कुटुंब सहल व पर्यटन",
+      duration: "1 Day",
+      daysCount: 1,
+      destinationsCount: 4,
+      category: "Family Trip",
+      tripType: "Family Trip",
+      priceTier: "Budget",
+      estimatedPrice: 1299,
+      image: "/images/hero.jpg",
+      rating: 4.7,
+      reviewCount: 190,
+      highlights: [
+        "New Palace Museum & Deer Park",
+        "Rankala Boating & Children Play Area",
+        "Mahalakshmi Temple Darshan",
+        "Traditional Sweets & Jaggery Market"
+      ],
+      description: "A comfortable, relaxed itinerary designed for families with children and senior citizens, ensuring easy transit and leisure."
+    },
+    {
+      id: "cultural-kolhapuri-trail",
+      name: "Authentic Kolhapuri Culture & Food Trail",
+      marathiName: "कोल्हापुरी खाद्य व संस्कृती सफर",
+      duration: "1 Day",
+      daysCount: 1,
+      destinationsCount: 5,
+      category: "Cultural Experiences",
+      tripType: "Cultural Experiences",
+      priceTier: "Moderate",
+      estimatedPrice: 1499,
+      image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600",
+      rating: 4.9,
+      reviewCount: 280,
+      highlights: [
+        "Historic Motibaug Kushti Taleem Visit",
+        "Shahupuri Gur (Jaggery) Exchange",
+        "Phadtare Misal Breakfast",
+        "Handmade Leather Chappal Workshop",
+        "Royal Tambda & Pandhra Rassa Feast"
+      ],
+      description: "Immerse yourself in centuries of living culture: watch traditional red-soil wrestling bouts, meet master leather artisans, and savor spicy feasts."
+    }
+  ],
+
+  gallery: [
+    {
+      id: "gal_1",
+      title: "Shri Mahalakshmi (Ambabai) Temple Sanctum",
+      category: "Temples",
+      image: "/images/destination-1.jpg",
+      caption: "7th-century black basalt Hemadpanthi temple of Goddess Mahalakshmi"
+    },
+    {
+      id: "gal_2",
+      title: "Mahalakshmi Temple Shikhara & Deepamalas",
+      category: "Temples",
+      image: "/images/mahalaxmi_temple2.jpg",
+      caption: "Ornate stone carved spires and lamp pillars outside the Garuda Mandap"
+    },
+    {
+      id: "gal_3",
+      title: "Jyotiba Temple Wadi Ratnagiri Hill",
+      category: "Temples",
+      image: "/images/destination-2.jpg",
+      caption: "Auspicious 3,124-foot Sahyadri peak draped in pink herbal gulal"
+    },
+    {
+      id: "gal_4",
+      title: "Jyotiba Temple Courtyard",
+      category: "Temples",
+      image: "/images/temple_t3buvqlA_202408141307420.jpeg",
+      caption: "Historic stone courtyards constructed in 1730 by Maharaja Ranoji Shinde"
+    },
+    {
+      id: "gal_5",
+      title: "Kopeshwar Temple Swarga Mandapa",
+      category: "Temples",
+      image: "/images/destination-3.jpg",
+      caption: "Circular open-to-sky celestial amphitheater supported by 48 carved pillars"
+    },
+    {
+      id: "gal_6",
+      title: "Kopeshwar Temple Exterior & Krishna River",
+      category: "Temples",
+      image: "/images/Kopeshwar_Temple-Khidrapur-Maharashtra1.webp",
+      caption: "12th-century plinth supported by 92 exquisitely sculpted stone elephants"
+    },
+    {
+      id: "gal_7",
+      title: "Panhala Fort Double-Walled Ramparts",
+      category: "Forts",
+      image: "/images/activity-2.jpg",
+      caption: "Commanding 7.25 km defensive stone walls perched 400m above the plains"
+    },
+    {
+      id: "gal_8",
+      title: "Panhala Fort Teen Darwaza & Bastions",
+      category: "Forts",
+      image: "/images/Panahala Fort.webp",
+      caption: "Strategic Maratha gateways and watchtowers overlooking the Konkan pass"
+    },
+    {
+      id: "gal_9",
+      title: "Rankala Lake Golden Hour Sunset",
+      category: "Nature",
+      image: "/images/activity-3.jpg",
+      caption: "Tranquil evening reflections across 107 hectares of freshwater"
+    },
+    {
+      id: "gal_10",
+      title: "Rankala Lake Chowpatty & Promenade",
+      category: "Nature",
+      image: "/images/Rankala.jpg",
+      caption: "Picturesque lakeside promenade, Padmaraje gardens, and pedal boats"
+    },
+    {
+      id: "gal_11",
+      title: "Rankala Lake Waterfront Vista",
+      category: "Nature",
+      image: "/images/b3d1ff0ccdc77b06a46960665075a4f7_1000x1000.jpg",
+      caption: "Victorian lamps and serene evening sky reflections at Rankala"
+    },
+    {
+      id: "gal_12",
+      title: "Kalammawadi Dam Gravity Reservoir",
+      category: "Nature",
+      image: "/images/activity-1.jpg",
+      caption: "73m high gravity dam on Dudhaganga River holding 28 TMC water storage"
+    },
+    {
+      id: "gal_13",
+      title: "Kalammawadi Dam Crest View",
+      category: "Nature",
+      image: "/images/Kalamwadi Damm.png",
+      caption: "Emerald folds of the Western Ghats meeting the deep blue reservoir"
+    },
+    {
+      id: "gal_14",
+      title: "New Palace & Chhatrapati Shahu Maharaj Museum",
+      category: "Heritage",
+      image: "/images/Shivaji-University-Kolhapur.jpg",
+      caption: "1884 black polished basalt Indo-Saracenic palace by Major Charles Mant"
+    },
+    {
+      id: "gal_15",
+      title: "Scenic Kolhapur Cityscape & Heritage Grounds",
+      category: "Heritage",
+      image: "/images/hero.jpg",
+      caption: "Lush Western Maharashtra hills and historic royal architecture"
+    },
+    {
+      id: "gal_16",
+      title: "Authentic Kolhapuri Misal Feast",
+      category: "Cuisine",
+      image: "https://images.unsplash.com/photo-1626777552726-4a6b54c97e46?w=600",
+      caption: "Spiced sprout curry topped with crispy farsan, fresh onions, and butter pav"
+    },
+    {
+      id: "gal_17",
+      title: "Handcrafted GI-Tagged Kolhapuri Chappals",
+      category: "Culture",
+      image: "https://images.unsplash.com/photo-1549298916-b41d501d3772?w=600",
+      caption: "Generational vegetable-tanned hand-braided leather footwear"
+    },
+    {
+      id: "gal_18",
+      title: "Traditional Kushti Taleem (Akhara)",
+      category: "Culture",
+      image: "https://images.unsplash.com/photo-1517838277536-f5f99be501cd?w=600",
+      caption: "Historic red-soil mud wrestling pits patronized by Rajarshi Shahu Maharaj"
+    }
+  ]
+};
+
+module.exports = initialData;
