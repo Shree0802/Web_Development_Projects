@@ -836,7 +836,7 @@ Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for full details
 
 <div align="center">
 
-**Built with ❤️ for the Prompt Wars Generative AI Competition.**  
+**Designed & Developed ❤️ by Prathamesh B. Patil.**  
 *Festivo AI — Every Celebration, Beautifully Planned.*
 
 [Back to Top ⬆️](#-festivo-ai)
