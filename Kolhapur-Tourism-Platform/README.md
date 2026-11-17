@@ -942,5 +942,5 @@ This project is open-source and distributed under the **[MIT License](LICENSE)**
 ---
 
 <div align="center">
-  <sub>Built with ❤️ for Kolhapur, Maharashtra. © 2026 Kolhapur Tourism Platform. All rights reserved.</sub>
+  <sub>Designed & Developed ❤️ by Prathamesh B. Patil.</sub>
 </div>
